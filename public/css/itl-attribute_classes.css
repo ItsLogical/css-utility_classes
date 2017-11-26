@@ -271,11 +271,17 @@
 .fixed {
   position: fixed; }
 
-.absolute {
+.absolute, .absolute--bottom, .absolute--right {
   position: absolute; }
 
 .relative {
   position: relative; }
+
+.absolute--bottom {
+  bottom: 0px; }
+
+.absolute--right {
+  right: 0px; }
 
 /* display */
 .inline {

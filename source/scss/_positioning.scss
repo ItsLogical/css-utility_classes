@@ -9,6 +9,16 @@
   position: relative;
 }
 
+.absolute--bottom {
+  @extend .absolute;
+  bottom: 0px;
+}
+
+.absolute--right {
+  @extend .absolute;
+  right: 0px;
+}
+
 /* display */
 .inline {
     display: inline-block;
