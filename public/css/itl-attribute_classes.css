@@ -274,14 +274,122 @@
 .absolute, .absolute--bottom, .absolute--right {
   position: absolute; }
 
-.relative {
-  position: relative; }
-
 .absolute--bottom {
   bottom: 0px; }
 
 .absolute--right {
   right: 0px; }
+
+.relative {
+  position: relative; }
+
+.b0 {
+  bottom: 0px; }
+
+.t0 {
+  top: 0px; }
+
+.r0 {
+  right: 0px; }
+
+.l0 {
+  left: 0px; }
+
+.b4 {
+  bottom: 4px; }
+
+.t4 {
+  top: 4px; }
+
+.r4 {
+  right: 4px; }
+
+.l4 {
+  left: 4px; }
+
+.b8 {
+  bottom: 8px; }
+
+.t8 {
+  top: 8px; }
+
+.r8 {
+  right: 8px; }
+
+.l8 {
+  left: 8px; }
+
+.b16 {
+  bottom: 16px; }
+
+.t16 {
+  top: 16px; }
+
+.r16 {
+  right: 16px; }
+
+.l16 {
+  left: 16px; }
+
+.b32 {
+  bottom: 32px; }
+
+.t32 {
+  top: 32px; }
+
+.r32 {
+  right: 32px; }
+
+.l32 {
+  left: 32px; }
+
+.b64 {
+  bottom: 64px; }
+
+.t64 {
+  top: 64px; }
+
+.r64 {
+  right: 64px; }
+
+.l64 {
+  left: 64px; }
+
+.b128 {
+  bottom: 128px; }
+
+.t128 {
+  top: 128px; }
+
+.r128 {
+  right: 128px; }
+
+.l128 {
+  left: 128px; }
+
+.b256 {
+  bottom: 256px; }
+
+.t256 {
+  top: 256px; }
+
+.r256 {
+  right: 256px; }
+
+.l256 {
+  left: 256px; }
+
+.b512 {
+  bottom: 512px; }
+
+.t512 {
+  top: 512px; }
+
+.r512 {
+  right: 512px; }
+
+.l512 {
+  left: 512px; }
 
 /* display */
 .inline {
