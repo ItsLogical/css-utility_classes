@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp watch",
     "watch": "onchange './source/scss/**/*.scss' -- npm run css-doc",
-    "css-doc": "kss --source ./source/scss/ --destination ./docs --css /css/itl-attribute_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL attribute_classes' --homepage ../../README.md"
+    "css-doc": "kss --source ./source/scss/ --destination ./public/styleguide --css /css/itl-attribute_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL attribute_classes' --homepage ../../README.md"
   },
   "repository": {
     "type": "git",
