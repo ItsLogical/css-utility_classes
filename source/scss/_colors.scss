@@ -1,0 +1,123 @@
+// Colors
+//
+// The primary colors for branding.
+//
+// color(turq)      - #1abc9c; Turqoise
+// color(green)      - #2ecc71; Weed Green
+// color(blue)      - #3498db; Really Blue
+// color(purple)      - #9b59b6; Purple
+// color(black)      - #34495e; Midnight Black
+// color(yellow)      - #f1c40f; Asian Yellow
+// color(orange)      - #e67e22; Mandarin Orange
+// color(red)      - #e74c3c; Bread Red
+// color(white)      - #ecf0f1; Off White
+// color(gray)      - #95a5a6; Very Gray
+// color(blank)      - #ffffff; Actually white
+// color(eee)      - #eee; Another shade of gray
+//
+// Styleguide Colors
+$colors: (
+  turq: #1abc9c,
+  green: #2ecc71,
+  blue: #3498db,
+  purple: #9b59b6,
+  black: #34495e,
+  yellow: #f1c40f,
+  orange: #e67e22,
+  red: #e74c3c,
+  white: #ecf0f1,
+  gray: #95a5a6,
+  blank: white,
+  eee: #eee
+);
+
+/**
+ * Used to retrieve color from dictionary
+ *  Example: color(turq) -> returns: #1abc9c
+ */
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+
+// Background-colors
+//
+// Use this class to change the background color
+//
+// Markup:
+// <div class="bg-red p16">Red div</div>
+// <div class="bg-white p16">White div</div>
+// <div class="bg-blue p16">Blue div</div>
+// <div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
+// <div class="bg-blue bg-darken p16">Darkened Blue div</div>
+// <div class="bg-blue bg-lighten p16">Lightend Blue div</div>
+//
+//
+// Styleguide Colors.background
+
+// Font-colors
+//
+// Use this class to change the font color
+//
+// Markup:
+// <h1 class="red">Red text</h1>
+// <h1 class="purple">Purple text</h1>
+//
+//
+// Styleguide Colors.font
+@each $colorName, $colorValue in $colors {
+    .#{$colorName} {
+        color: $colorValue;
+    }
+    .bg-#{$colorName} {
+        background-color: $colorValue;
+    }
+    .underline-#{$colorName} {
+        border-bottom: 1px solid rgba($colorValue, 0.3);
+    }
+    .upperline-#{$colorName} {
+        border-top: 1px solid rgba($colorValue, 0.3);
+    }
+}
+/* defaults */
+.underline {
+    border-bottom: 1px solid rgba(color(white), 0.3);
+}
+.upperline {
+    border-top: 1px solid rgba(color(white), 0.3);
+}
+
+/* other bg-tricks */
+.bg-shaded {
+    background-color: rgba(0,0,0,0.25);
+}
+.bg-darken {
+    position: relative;
+    &:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,0.5);
+    }
+}
+
+.bg-lighten {
+    position: relative;
+    &:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(255,255,255,0.5);
+    }
+}

@@ -1,0 +1,109 @@
+/* https://responsivedesign.is/develop/getting-started-with-sass-and-breakpoint-mixin/ */
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (min-width: 75em) { @content ; }
+  }
+  @else if $point == md {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == sm {
+    @media (min-width: 48em) { @content ; }
+  }
+  @else if $point == xs {
+    @content ;
+  }
+}
+
+
+.container {
+  @include breakpoint(xs) {
+		width: 100%;
+	}
+  @include breakpoint(sm) {
+		width: 800px;
+	}
+  @include breakpoint(md) {
+    width: 1000px;
+  }
+  @include breakpoint(lg) {
+    width: 1200px;
+  }
+}
+.small-container {
+    max-width: 900px;
+}
+
+.hide-xs {
+  @include breakpoint(xs) {
+		display: none;
+	}
+  @include breakpoint(sm) {
+		display: initial;
+	}
+}
+
+.hide-sm {
+  @include breakpoint(sm) {
+    display: none;
+  }
+  @include breakpoint(md) {
+    display: initial;
+  }
+}
+
+.hide-md {
+  @include breakpoint(md) {
+    display: none;
+  }
+  @include breakpoint(lg) {
+    display: initial;
+  }
+}
+
+.hide-lg {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  @include breakpoint(lg) {
+    display: initial;
+  }
+}
+
+.show-xs {
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+.show-sm {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  @include breakpoint(sm) {
+    display: initial;
+  }
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.show-md {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  @include breakpoint(md) {
+    display: initial;
+  }
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.show-lg {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  @include breakpoint(lg) {
+    display: initial;
+  }
+}

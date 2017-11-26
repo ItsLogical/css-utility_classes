@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Raleway:100,300,400');
+
+
+// Prettier fonts
+//
+// Use this class to get prettier fonts
+//
+// Markup:
+// <h2>Regular title</h2>
+// <p>A regular paragraph</p>
+// <h2 class="title">A prettier title</h2>
+// <p class="text">A prettier paragraph</p>
+//
+// Styleguide Fonts.families
+.title {
+  font-family: "Montserrat";
+}
+.text {
+  font-family: "Raleway";
+}
+
+// Smaller font
+//
+// Use this class to get a smaller font
+//
+// Markup:
+// <p>Text that holds <span class="smaller">some smaller text</span> inside of it</p>
+//
+// Styleguide Fonts.smaller
+.smaller {
+  font-size: 0.8em;
+}
+
+// Thinner font
+//
+// Use these classes to get a thinner font
+//
+// Markup:
+// <p class="text">Text that holds <span class="thin">very thin text</span> inside of it</p>
+// <p class="text">Text that holds <span class="light">Quite thin text</span> inside of it</p>
+//
+// Styleguide Fonts.thinner
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 300;
+}

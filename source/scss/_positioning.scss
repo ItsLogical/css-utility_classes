@@ -1,0 +1,50 @@
+/* positions */
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+/* display */
+.inline {
+    display: inline-block;
+}
+.hidden {
+    display: none;
+}
+
+/* floats */
+.float-right {
+    float: right;
+}
+
+/* flexy */
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-grow {
+    flex-grow: 1;
+}
+
+/* inline */
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+
+.border-box {
+    box-sizing: border-box;
+}

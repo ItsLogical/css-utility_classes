@@ -1,0 +1,75 @@
+// Widths and Heights
+//
+// Use these classes to specify a width or height to elements <br/>
+// Supported sizes: 0, 4, 8, 16, 32, 128, 256, 512
+//
+// Markup:
+// <div class="bg-blue w16 h16 inline"></div>
+// <div class="bg-yellow w32 h16 inline"></div>
+// <div class="bg-red w64 h32 inline"></div>
+// <div class="bg-green full-width h8"></div>
+//
+// Styleguide Sizes.dimensions
+
+
+// Margins and Paddings
+//
+// Use these classes to specify margins and paddings to elements <br/>
+// Supported sizes: 0, 4, 8, 16, 32, 128, 256, 512
+//
+// Markup:
+// <div class="bg-blue full-width h8 mb4"></div>
+// <div class="bg-red full-width h8 mb4"></div>
+// <div class="bg-yellow w256 h8 mr4 inline"></div><div class="bg-green w256 h8 mr4 inline"></div><div class="bg-black w256 h8 mr4 inline"></div>
+//
+// Styleguide Sizes.spacings
+@each $size in 0, 4, 8, 16, 32, 64, 128, 256, 512 {
+    /* margins */
+    .m#{$size} {
+        margin: $size + px;
+    }
+    .mt#{$size} {
+        margin-top: $size + px;
+    }
+    .mb#{$size} {
+        margin-bottom: $size + px;
+    }
+    .ml#{$size} {
+        margin-left: $size + px;
+    }
+    .mr#{$size} {
+        margin-right: $size + px;
+    }
+    /* paddings */
+    .p#{$size} {
+        padding: $size + px;
+    }
+    .pl#{$size} {
+        padding-left: $size + px;
+    }
+    .pr#{$size} {
+        padding-right: $size + px;
+    }
+    .pt#{$size} {
+        padding-top: $size + px;
+    }
+    .pb#{$size} {
+        padding-bottom: $size + px;
+    }
+    /* width & height */
+    .w#{$size} {
+        width: $size + px;
+    }
+    .h#{$size} {
+        height: $size + px;
+    }
+}
+
+
+.full-width, .wp100 {
+    width: 100%;
+}
+
+.full-height, .hp100 {
+    height: 100%;
+}

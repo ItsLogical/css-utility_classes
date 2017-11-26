@@ -1,0 +1,37 @@
+{
+  "name": "css-attribute_classes",
+  "version": "1.0.0",
+  "description": "ITL css-attribute_classes",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp watch",
+    "watch": "onchange './source/scss/**/*.scss' -- npm run css-doc",
+    "css-doc": "kss --source ./source/scss/ --destination ./public/styleguide --css /css/itl-attribute_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL attribute_classes' --homepage ../../README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kishanjay/css-attribute_classes.git"
+  },
+  "keywords": [
+    "ITL",
+    "CSS",
+    "prototype",
+    "attribute_classes"
+  ],
+  "author": "Kishan Nirghin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kishanjay/css-attribute_classes/issues"
+  },
+  "homepage": "https://github.com/Kishanjay/css-attribute_classes#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "kss": "^3.0.0-beta.18",
+    "michelangelo": "^0.6.1",
+    "onchange": "^3.2.1"
+  }
+}
