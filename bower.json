@@ -1,0 +1,23 @@
+{
+  "name": "itl-css-attribute_classes",
+  "description": "ITL css-attribute_classes",
+  "main": "gulpfile.js",
+  "authors": [
+    "Kishan Nirghin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ITL",
+    "CSS",
+    "prototyping",
+    "attribute_classes"
+  ],
+  "homepage": "https://github.com/Kishanjay/css-attribute_classes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
