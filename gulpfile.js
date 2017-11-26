@@ -60,3 +60,5 @@ gulp.task("watch", ["browserSync", "build-html", "build-css"], function(){
 
     gulp.watch("gulpfile.js").on("change", () => process.exit(0));
 });
+
+gulp.task("build", ["build-html", "build-css"]);
