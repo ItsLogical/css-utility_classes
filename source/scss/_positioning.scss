@@ -1,23 +1,18 @@
 /* positions */
-
 .fixed {
     position: fixed;
 }
-
 .absolute {
     position: absolute;
 }
-
 .absolute--bottom {
     @extend .absolute;
     bottom: 0px;
 }
-
 .absolute--right {
     @extend .absolute;
     right: 0px;
 }
-
 .relative {
     position: relative;
 }
@@ -40,7 +35,6 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 
 
 /* display */
-
 .inline {
     display: inline-block;
 }
@@ -50,39 +44,35 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 }
 
 
+// No BEM DOWN HERE. (http://getbem.com/) because they are not modifiers, but rather quick classes
 /* floats */
-
 .float-right {
     float: right;
 }
 
-
 /* flexy */
-
 .space-between {
     display: flex;
     justify-content: space-between;
 }
-
 .flex-grow {
     flex-grow: 1;
 }
-
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
 /* inline */
-
 .left-align {
     text-align: left;
 }
-
 .right-align {
     text-align: right;
 }
-
 .center-align {
     text-align: center;
 }
-
 .border-box {
     box-sizing: border-box;
 }

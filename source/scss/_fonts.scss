@@ -27,9 +27,11 @@
 // <p>Text that holds <span class="smaller">some smaller text</span> inside of it</p>
 //
 // Styleguide Fonts.smaller
-.smaller {
+.smaller, smaller {
   font-size: 0.8em;
 }
+
+
 
 // Thinner font
 //

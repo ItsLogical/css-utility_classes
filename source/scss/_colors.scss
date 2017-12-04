@@ -74,13 +74,13 @@ $colors: (
     .#{$colorName} {
         color: $colorValue;
     }
-    .bg-#{$colorName} {
+    .bg--#{$colorName} {
         background-color: $colorValue;
     }
-    .underline-#{$colorName} {
+    .underline--#{$colorName} {
         border-bottom: 1px solid rgba($colorValue, 0.3);
     }
-    .upperline-#{$colorName} {
+    .upperline--#{$colorName} {
         border-top: 1px solid rgba($colorValue, 0.3);
     }
 }
@@ -93,10 +93,10 @@ $colors: (
 }
 
 /* other bg-tricks */
-.bg-shaded {
+.bg--shaded {
     background-color: rgba(0,0,0,0.25);
 }
-.bg-darken {
+.bg--darken {
     position: relative;
     &:after {
         content: '\A';
@@ -109,7 +109,7 @@ $colors: (
     }
 }
 
-.bg-lighten {
+.bg--lighten {
     position: relative;
     &:after {
         content: '\A';
