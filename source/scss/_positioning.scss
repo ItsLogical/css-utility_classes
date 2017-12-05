@@ -5,14 +5,6 @@
 .absolute {
     position: absolute;
 }
-.absolute--bottom {
-    @extend .absolute;
-    bottom: 0px;
-}
-.absolute--right {
-    @extend .absolute;
-    right: 0px;
-}
 .relative {
     position: relative;
 }
@@ -43,8 +35,6 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
     display: none;
 }
 
-
-// No BEM DOWN HERE. (http://getbem.com/) because they are not modifiers, but rather quick classes
 /* floats */
 .float-right {
     float: right;
