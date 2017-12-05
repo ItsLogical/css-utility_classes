@@ -75,20 +75,20 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-fonts-families">
+            <header class="kss-section kss-section--depth-2" id="kssref-fonts-size">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>4</span></p>
+                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>38</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-fonts-families">
+              <a class="kss-section__permalink" href="#kssref-fonts-size">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.2</span>
-                  <span class="kss-section__name">Prettier font-families</span>
+                  <span class="kss-section__ref">2.3</span>
+                  <span class="kss-section__name">Relative fontsizes</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Use these classes to get prettier fonts</p>
-</div>
+                <div class="kss-section__description"><p>Use these classes to quicky change the fontsize <br/></p>
+<p class="note fsp80">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p></div>
 
             </article>
 
@@ -96,18 +96,22 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><h2>This is an example of a regular title</h2>
-<h2 class="title">This is an example of a prettier title</h2>
-<p>This is an example of a regular paragraph</p>
-<p class="text">This is an example of a prettier paragraph</p></div>
+                <div class="kss-modifiers__example"><div>
+ <p class="fsp20">This is a font size</p>
+ <p class="fsp60">This is a font size</p>
+ <p class="fsp140">This is a font size</p>
+ <p class="fsp200">This is a font size</p>
+</div></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;h2&gt;This is an example of a regular title&lt;/h2&gt;
-&lt;h2 class&#x3D;&quot;title&quot;&gt;This is an example of a prettier title&lt;/h2&gt;
-&lt;p&gt;This is an example of a regular paragraph&lt;/p&gt;
-&lt;p class&#x3D;&quot;text&quot;&gt;This is an example of a prettier paragraph&lt;/p&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;div&gt;
+ &lt;p class&#x3D;&quot;fsp20&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp60&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp140&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp200&quot;&gt;This is a font size&lt;/p&gt;
+&lt;/div&gt;</code></pre>
                 </article>
 
             </header>

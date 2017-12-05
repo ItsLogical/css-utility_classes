@@ -4,8 +4,8 @@
 //
 // color(turq)      - #1abc9c; Turqoise
 // color(green)      - #2ecc71; Weed Green
-// color(blue)      - #3498db; Really Blue
-// color(purple)      - #9b59b6; Purple
+// color(blue)      - #3498db; Ballz Blue
+// color(purple)      - #9b59b6; Really Purple
 // color(black)      - #34495e; Midnight Black
 // color(yellow)      - #f1c40f; Asian Yellow
 // color(orange)      - #e67e22; Mandarin Orange
@@ -70,6 +70,17 @@ $colors: (
 //
 //
 // Styleguide Colors.font
+
+// Border-colors
+//
+// Use this class to add a (colored) border
+//
+// Markup:
+// <h1 class="underline-red">Red text</h1>
+// <h1 class="upperline-purple underline black">Purple text</h1>
+//
+//
+// Styleguide Colors.border
 @each $colorName, $colorValue in $colors {
     .#{$colorName} {
         color: $colorValue;

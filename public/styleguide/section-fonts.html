@@ -51,21 +51,27 @@
             </a>
                 <ul class="kss-nav__subnav">
                     <li class="kss-nav__item ">
-                      <a href="section-fonts.html#kssref-fonts-families">
+                      <a href="section-fonts.html#kssref-fonts-effects">
                         <span class="kss-nav__ref">2.1</span>
-                        <span class="kss-nav__name">Prettier fonts</span>
+                        <span class="kss-nav__name">Font effects</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
-                      <a href="section-fonts.html#kssref-fonts-smaller">
+                      <a href="section-fonts.html#kssref-fonts-families">
                         <span class="kss-nav__ref">2.2</span>
-                        <span class="kss-nav__name">Smaller font</span>
+                        <span class="kss-nav__name">Prettier font-families</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
-                      <a href="section-fonts.html#kssref-fonts-thinner">
+                      <a href="section-fonts.html#kssref-fonts-size">
                         <span class="kss-nav__ref">2.3</span>
-                        <span class="kss-nav__name">Thinner font</span>
+                        <span class="kss-nav__name">Relative fontsizes</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-fonts.html#kssref-fonts-sizequick">
+                        <span class="kss-nav__ref">2.4</span>
+                        <span class="kss-nav__name">Quick fontsizes</span>
                       </a>
                     </li>
                 </ul>
@@ -111,19 +117,19 @@
 
 
             </header>
-            <section class="kss-section kss-section--depth-2" id="kssref-fonts-families">
+            <section class="kss-section kss-section--depth-2" id="kssref-fonts-effects">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>4</span></p>
+                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>61</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-fonts-families">
+              <a class="kss-section__permalink" href="#kssref-fonts-effects">
                 <h2 class="kss-section__item kss-section__item--depth-2">
                   <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">Prettier fonts</span>
+                  <span class="kss-section__name">Font effects</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Use this class to get prettier fonts</p>
+                <div class="kss-section__description"><p>Use these classes to add font effects</p>
 </div>
 
             </article>
@@ -132,30 +138,104 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><h2>Regular title</h2>
-<p>A regular paragraph</p>
-<h2 class="title">A prettier title</h2>
-<p class="text">A prettier paragraph</p></div>
+                <div class="kss-modifiers__example"><p class="text">Text that holds <span class="thin">very thin text</span> inside of it</p>
+<p class="text">Text that holds <span class="light">Quite thin text</span> inside of it</p>
+<p class="text">Text that holds <span class="note">Some sort of note</span> inside of it</span></p></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;h2&gt;Regular title&lt;/h2&gt;
-&lt;p&gt;A regular paragraph&lt;/p&gt;
-&lt;h2 class&#x3D;&quot;title&quot;&gt;A prettier title&lt;/h2&gt;
-&lt;p class&#x3D;&quot;text&quot;&gt;A prettier paragraph&lt;/p&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;text&quot;&gt;Text that holds &lt;span class&#x3D;&quot;thin&quot;&gt;very thin text&lt;/span&gt; inside of it&lt;/p&gt;
+&lt;p class&#x3D;&quot;text&quot;&gt;Text that holds &lt;span class&#x3D;&quot;light&quot;&gt;Quite thin text&lt;/span&gt; inside of it&lt;/p&gt;
+&lt;p class&#x3D;&quot;text&quot;&gt;Text that holds &lt;span class&#x3D;&quot;note&quot;&gt;Some sort of note&lt;/span&gt; inside of it&lt;/span&gt;&lt;/p&gt;</code></pre>
                 </article>
 
             </section>
-            <section class="kss-section kss-section--depth-2" id="kssref-fonts-smaller">
+            <section class="kss-section kss-section--depth-2" id="kssref-fonts-families">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>4</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-fonts-families">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.2</span>
+                  <span class="kss-section__name">Prettier font-families</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Use these classes to get prettier fonts</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><h2>This is an example of a regular title</h2>
+<h2 class="title">This is an example of a prettier title</h2>
+<p>This is an example of a regular paragraph</p>
+<p class="text">This is an example of a prettier paragraph</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;h2&gt;This is an example of a regular title&lt;/h2&gt;
+&lt;h2 class&#x3D;&quot;title&quot;&gt;This is an example of a prettier title&lt;/h2&gt;
+&lt;p&gt;This is an example of a regular paragraph&lt;/p&gt;
+&lt;p class&#x3D;&quot;text&quot;&gt;This is an example of a prettier paragraph&lt;/p&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-fonts-size">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>38</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-fonts-size">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.3</span>
+                  <span class="kss-section__name">Relative fontsizes</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Use these classes to quicky change the fontsize <br/></p>
+<p class="note fsp80">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+ <p class="fsp20">This is a font size</p>
+ <p class="fsp60">This is a font size</p>
+ <p class="fsp140">This is a font size</p>
+ <p class="fsp200">This is a font size</p>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+ &lt;p class&#x3D;&quot;fsp20&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp60&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp140&quot;&gt;This is a font size&lt;/p&gt;
+ &lt;p class&#x3D;&quot;fsp200&quot;&gt;This is a font size&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-fonts-sizequick">
 
             <article class="kss-section__content">
                 <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>22</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-fonts-smaller">
+              <a class="kss-section__permalink" href="#kssref-fonts-sizequick">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.2</span>
-                  <span class="kss-section__name">Smaller font</span>
+                  <span class="kss-section__ref">2.4</span>
+                  <span class="kss-section__name">Quick fontsizes</span>
                 </h2>
               </a>
 
@@ -168,44 +248,14 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><p>Text that holds <span class="smaller">some smaller text</span> inside of it</p></div>
+                <div class="kss-modifiers__example"><p>Text that holds <span class="smaller">some smaller text</span> inside of it</p>
+<p>Text that holds <span class="bigger">some bigger text</span> inside of it</p></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;p&gt;Text that holds &lt;span class&#x3D;&quot;smaller&quot;&gt;some smaller text&lt;/span&gt; inside of it&lt;/p&gt;</code></pre>
-                </article>
-
-            </section>
-            <section class="kss-section kss-section--depth-2" id="kssref-fonts-thinner">
-
-            <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_fonts.scss</span>, line <span>34</span></p>
-
-              <a class="kss-section__permalink" href="#kssref-fonts-thinner">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.3</span>
-                  <span class="kss-section__name">Thinner font</span>
-                </h2>
-              </a>
-
-                <div class="kss-section__description"><p>Use these classes to get a thinner font</p>
-</div>
-
-            </article>
-
-              <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Example</h1>
-
-
-                <div class="kss-modifiers__example"><p class="text">Text that holds <span class="thin">very thin text</span> inside of it</p>
-<p class="text">Text that holds <span class="light">Quite thin text</span> inside of it</p></div>
-
-              </article>
-
-                <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;text&quot;&gt;Text that holds &lt;span class&#x3D;&quot;thin&quot;&gt;very thin text&lt;/span&gt; inside of it&lt;/p&gt;
-&lt;p class&#x3D;&quot;text&quot;&gt;Text that holds &lt;span class&#x3D;&quot;light&quot;&gt;Quite thin text&lt;/span&gt; inside of it&lt;/p&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;p&gt;Text that holds &lt;span class&#x3D;&quot;smaller&quot;&gt;some smaller text&lt;/span&gt; inside of it&lt;/p&gt;
+&lt;p&gt;Text that holds &lt;span class&#x3D;&quot;bigger&quot;&gt;some bigger text&lt;/span&gt; inside of it&lt;/p&gt;</code></pre>
                 </article>
 
             </section>

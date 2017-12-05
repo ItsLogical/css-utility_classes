@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Raleway:100,300,400');
 
 
-// Prettier fonts
+// Prettier font-families
 //
-// Use this class to get prettier fonts
+// Use these classes to get prettier fonts
 //
 // Markup:
-// <h2>Regular title</h2>
-// <p>A regular paragraph</p>
-// <h2 class="title">A prettier title</h2>
-// <p class="text">A prettier paragraph</p>
+// <h2>This is an example of a regular title</h2>
+// <h2 class="title">This is an example of a prettier title</h2>
+// <p>This is an example of a regular paragraph</p>
+// <p class="text">This is an example of a prettier paragraph</p>
 //
 // Styleguide Fonts.families
 .title {
@@ -19,39 +19,62 @@
   font-family: "Raleway";
 }
 
-// Smaller font
+// Quick fontsizes
 //
 // Use this class to get a smaller font
 //
 // Markup:
 // <p>Text that holds <span class="smaller">some smaller text</span> inside of it</p>
+// <p>Text that holds <span class="bigger">some bigger text</span> inside of it</p>
 //
-// Styleguide Fonts.smaller
-.smaller, smaller {
+// Styleguide Fonts.sizequick
+.smaller {
   font-size: 0.8em;
 }
+.bigger {
+  font-size: 1.2em;
+}
 
-
-$font_sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+// Relative fontsizes
+//
+// Use these classes to quicky change the fontsize <br/>
+// <p class="note fsp80">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p>
+//
+// Markup:
+// <div>
+//  <p class="fsp20">This is a font size</p>
+//  <p class="fsp60">This is a font size</p>
+//  <p class="fsp140">This is a font size</p>
+//  <p class="fsp200">This is a font size</p>
+// </div>
+//
+//
+// Styleguide Fonts.size
+$font_sizes: (20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500);
 @each $size in $font_sizes {
-    .fs#{$size} {
-        font-size: '0.' + $size + em;
+    .fsp#{$size} {
+        font-size: $size/100 + em !important;
     }
 }
 
 
-// Thinner font
+// Font effects
 //
-// Use these classes to get a thinner font
+// Use these classes to add font effects
 //
 // Markup:
 // <p class="text">Text that holds <span class="thin">very thin text</span> inside of it</p>
 // <p class="text">Text that holds <span class="light">Quite thin text</span> inside of it</p>
+// <p class="text">Text that holds <span class="note">Some sort of note</span> inside of it</span></p>
 //
-// Styleguide Fonts.thinner
+// Styleguide Fonts.effects
 .thin {
   font-weight: 100;
 }
 .light {
   font-weight: 300;
+}
+.note {
+  font-size: 0.6em;
+  font-style: italic;
 }
