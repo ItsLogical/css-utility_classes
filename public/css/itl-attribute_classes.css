@@ -162,44 +162,26 @@
 .bigger {
   font-size: 1.2em; }
 
-.fsp20 {
-  font-size: 0.2em !important; }
+.t1 {
+  font-size: 3.998em !important; }
 
-.fsp40 {
-  font-size: 0.4em !important; }
+.t2 {
+  font-size: 2.827em !important; }
 
-.fsp60 {
-  font-size: 0.6em !important; }
+.t3 {
+  font-size: 1.999em !important; }
 
-.fsp80 {
-  font-size: 0.8em !important; }
+.t4 {
+  font-size: 1.414em !important; }
 
-.fsp120 {
-  font-size: 1.2em !important; }
+.s1 {
+  font-size: 0.707em !important; }
 
-.fsp140 {
-  font-size: 1.4em !important; }
+.s2 {
+  font-size: 0.5em !important; }
 
-.fsp160 {
-  font-size: 1.6em !important; }
-
-.fsp180 {
-  font-size: 1.8em !important; }
-
-.fsp200 {
-  font-size: 2em !important; }
-
-.fsp250 {
-  font-size: 2.5em !important; }
-
-.fsp300 {
-  font-size: 3em !important; }
-
-.fsp400 {
-  font-size: 4em !important; }
-
-.fsp500 {
-  font-size: 5em !important; }
+.s3 {
+  font-size: 0.354em !important; }
 
 .thin {
   font-weight: 100; }

@@ -38,27 +38,42 @@
 // Relative fontsizes
 //
 // Use these classes to quicky change the fontsize <br/>
-// <p class="note fsp80">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p>
+// <p class="note s1">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p>
 //
 // Markup:
 // <div>
-//  <p class="fsp20">This is a font size</p>
-//  <p class="fsp60">This is a font size</p>
-//  <p class="fsp140">This is a font size</p>
-//  <p class="fsp200">This is a font size</p>
+//  <p class="t1">This is a font size</p>
+//  <p class="t2">This is a font size</p>
+//  <p class="t4">This is a font size</p>
+//  <p class="s1">This is a font size</p>
+//  <p class="s2">This is a font size</p>
 // </div>
 //
 //
 // Styleguide Fonts.size
-$font_sizes: (20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500);
-@each $size in $font_sizes {
-    .fsp#{$size} {
-        font-size: $size/100 + em !important;
-    }
+
+// Source: http://type-scale.com/
+.t1 {
+  font-size: 3.998em !important;
 }
-
-
-
+.t2 {
+  font-size: 2.827em !important;
+}
+.t3 {
+  font-size: 1.999em !important;
+}
+.t4 {
+  font-size: 1.414em !important;
+}
+.s1 {
+  font-size: 0.707em !important;
+}
+.s2 {
+  font-size: 0.5em !important;
+}
+.s3 {
+  font-size: 0.354em !important;
+}
 
 // Font effects
 //
