@@ -1,0 +1,59 @@
+// Buttons
+//
+// Better buttons
+//
+// Styleguide Button
+
+// Sizes
+//
+// Markup:
+// <button class="button button--xs bg-yellow border-black">Sample button</button>
+// <button class="button button--sm bg-green">Sample button</button>
+// <button class="button button--md bg-red">Sample button</button>
+// <button class="button button--lg bg-blue">Sample button</button>
+// <button class="button button--xl bg-white border-black">Sample button</button>
+//
+//
+// Styleguide Button.sizes
+.button {
+    @extend .clickable;
+    display: inline-block;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 0px;
+
+    text-align: center;
+    text-decoration: none;
+}
+.button--xs {
+    padding: 4px;
+}
+.button--sm {
+    padding: 8px 10px;
+}
+.button--md {
+
+}
+.button--lg {
+    padding: 16px 32px;
+}
+.button--xl {
+    padding: 24px 64px;
+}
+
+// Styles
+//
+// Markup:
+// <button class="button button--curve bg-green">Sample button</button>
+// <button class="button button--round bg-green w32 h32">K</button>
+// <button class="button button--round bg-red white w128 h128 fsp200">Big</button>
+//
+//
+// Styleguide Button.styles
+.button--curve {
+    border-radius: 8px;
+}
+.button--round {
+    @extend .flex-center;
+    border-radius: 50%;
+}

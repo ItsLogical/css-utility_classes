@@ -1,0 +1,79 @@
+// Table
+//
+// basic table
+//
+// Markup:
+// <table class="inline-block table table--bordered bordered--blue">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="inline-block table table--striped">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="inline-block table table--bordered bordered--vertical bordered--red">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="inline-block table table--striped striped__odd--black striped__even--blue">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+//
+//
+// Styleguide Table
+.table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+    td, th {
+        padding: 16px;
+    }
+}
+
+// I do feel like this syntax can be improved, cannot think of the perfect solution atm tho.
+.table--striped {
+    tr:nth-child(odd) {
+        @extend .bg-eee;
+    }
+
+    // different row-colors
+    @each $colorName, $colorValue in $colors {
+        &.striped__odd--#{$colorName} tr:nth-child(odd){
+            background-color: $colorValue;
+        }
+
+        &.striped__even--#{$colorName} tr:nth-child(even){
+            background-color: $colorValue;
+        }
+    }
+}
+
+
+.table--bordered {
+    th, td {
+        border: 1px solid black;
+    }
+
+    // different border-colors
+    @each $colorName, $colorValue in $colors {
+        &.bordered--#{$colorName} {
+            th, td {
+                border-color: $colorValue;
+            }
+        }
+    }
+
+    // different border-style
+    &.bordered--vertical {
+        th, td {
+            border-left-width: 0px;
+            border-right-width: 0px;
+        }
+    }
+}
+

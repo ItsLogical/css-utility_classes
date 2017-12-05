@@ -1,0 +1,45 @@
+// Colors
+//
+// The primary colors for branding.
+//
+// color(turq)      - #1abc9c; Turqoise
+// color(green)      - #2ecc71; Weed Green
+// color(blue)      - #3498db; Ballz Blue
+// color(purple)      - #9b59b6; Really Purple
+// color(black)      - #34495e; Midnight Black
+// color(yellow)      - #f1c40f; Asian Yellow
+// color(orange)      - #e67e22; Mandarin Orange
+// color(red)      - #e74c3c; Bread Red
+// color(white)      - #ecf0f1; Off White
+// color(gray)      - #95a5a6; Very Gray
+// color(blank)      - #ffffff; Actually white
+// color(eee)      - #eee; Another shade of gray
+//
+// Styleguide Colors
+$colors: (
+    turq: #1abc9c,
+    green: #2ecc71,
+    blue: #3498db,
+    purple: #9b59b6,
+    black: #34495e,
+    yellow: #f1c40f,
+    orange: #e67e22,
+    red: #e74c3c,
+    white: #ecf0f1,
+    gray: #95a5a6,
+    blank: white,
+    eee: #eee
+  );
+  
+  /**
+   * Used to retrieve color from dictionary
+   *  Example: color(turq) -> returns: #1abc9c
+   */
+  @function color($key) {
+    @if map-has-key($colors, $key) {
+      @return map-get($colors, $key);
+    }
+  
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+  }

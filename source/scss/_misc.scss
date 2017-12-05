@@ -1,3 +1,8 @@
+// Misc
+//
+//
+// Styleguide zMisc
+
 // Clickable links
 //
 // Use this class to make elements appear clickable
@@ -7,7 +12,7 @@
 // <p class="link">This is a regular paragraph</p>
 //
 //
-// Styleguide Misc.clickable
+// Styleguide zMisc.clickable
 .clickable {
     cursor: pointer;
 }
@@ -30,7 +35,7 @@
 // <p class="not-allowed">This is a regular paragraph</p>
 //
 //
-// Styleguide Misc.noclick
+// Styleguide zMisc.noclick
 .not-allowed {
     cursor: not-allowed;
 }
@@ -43,7 +48,7 @@
 // <p class="no-select">This is a regular paragraph</p>
 //
 //
-// Styleguide Misc.noselect
+// Styleguide zMisc.noselect
 .no-select {
     user-select: none;
     outline: none;

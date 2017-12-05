@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ITL attribute_classes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/itl-attribute_classes.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">ITL attribute_classes</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">ITL attribute_classes</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-button.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Buttons</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-colors.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Colors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-fonts.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Fonts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layout</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-layout.html#kssref-layout-display">
+                        <span class="kss-nav__ref">4.1</span>
+                        <span class="kss-nav__name">Display types</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-layout.html#kssref-layout-flex">
+                        <span class="kss-nav__ref">4.2</span>
+                        <span class="kss-nav__name">Flex</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-layout.html#kssref-layout-position">
+                        <span class="kss-nav__ref">4.3</span>
+                        <span class="kss-nav__name">Positioning</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-layout.html#kssref-layout-position-absolute">
+                        <span class="kss-nav__ref">4.3.1</span>
+                        <span class="kss-nav__name">Absolute</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-layout.html#kssref-layout-zextra">
+                        <span class="kss-nav__ref">4.4</span>
+                        <span class="kss-nav__name">Extra</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-layout.html#kssref-layout-zextra-center">
+                        <span class="kss-nav__ref">4.4.1</span>
+                        <span class="kss-nav__name">Center</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-layout.html#kssref-layout-zextra-float">
+                        <span class="kss-nav__ref">4.4.2</span>
+                        <span class="kss-nav__name">Float</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-layout.html#kssref-layout-zextra-text">
+                        <span class="kss-nav__ref">4.4.3</span>
+                        <span class="kss-nav__name">Text</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-responsiveness.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Responsiveness</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-sizes.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Sizes</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-table.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Table</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-zmisc.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Misc</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-layout">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-layout">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">4</span>
+                  <span class="kss-section__name">Layout</span>
+                </h1>
+              </a>
+
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-layout-display">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-display">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.1</span>
+                  <span class="kss-section__name">Display types</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Quick classes to change the display</p>
+<p><ul><li>.inline</li><li>.inline-block</li><li>.block</li><li>.hidden</li><ul></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="h50 bg-blue">
+ <div class="p16 bg-red inline-block">Example</div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;h50 bg-blue&quot;&gt;
+ &lt;div class&#x3D;&quot;p16 bg-red inline-block&quot;&gt;Example&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-layout-flex">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>91</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-flex">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.2</span>
+                  <span class="kss-section__name">Flex</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>.flex, .space-between, .flex-shrink, .flex-grow, .flex-column, .flex-center</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-layout-position">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>33</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-position">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.3</span>
+                  <span class="kss-section__name">Positioning</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Quick classes to change the position</p>
+<ul><li>.fixed</li><li>.absolute</li><li>.relative</li></ul></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="h128 bg-blue relative">
+ <div class="p16 bg-red inline-block">Example</div>
+ <div class="p16 bg-yellow inline-block absolute r0">Example</div>
+ <div class="p16 bg-green inline-block absolute b0 l0">Example</div>
+ <div class="p16 bg-purple inline-block absolute b0 r0">Example</div>
+ <div class="p16 bg-black inline-block absolute b64 l256">Example</div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;h128 bg-blue relative&quot;&gt;
+ &lt;div class&#x3D;&quot;p16 bg-red inline-block&quot;&gt;Example&lt;/div&gt;
+ &lt;div class&#x3D;&quot;p16 bg-yellow inline-block absolute r0&quot;&gt;Example&lt;/div&gt;
+ &lt;div class&#x3D;&quot;p16 bg-green inline-block absolute b0 l0&quot;&gt;Example&lt;/div&gt;
+ &lt;div class&#x3D;&quot;p16 bg-purple inline-block absolute b0 r0&quot;&gt;Example&lt;/div&gt;
+ &lt;div class&#x3D;&quot;p16 bg-black inline-block absolute b64 l256&quot;&gt;Example&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-layout-position-absolute">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>57</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-position-absolute">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.3.1</span>
+                  <span class="kss-section__name">Absolute</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Absolute classes can use .tX .bX .lX .rX to change the top, bottom, left, right values</p>
+<p class="note fsp80">Supported sizes: 0, 4, 8, 16, 32, 64, 128, 256, 512</p></div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-layout-zextra">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>125</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-zextra">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.4</span>
+                  <span class="kss-section__name">Extra</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-layout-zextra-center">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>131</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-zextra-center">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.4.1</span>
+                  <span class="kss-section__name">Center</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><ul>
+ <li>.m-auto@child - absolute centering </li>
+ <li>.m0-auto@child - horizontal centering (block in block)</li>
+ <li>.center@parent - horizontal centering (inline in block)</li>
+ <li>.flex-center@parent - centers everything</li>
+</ul></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="wp100 h200 bg-red flex-center">
+ <div class="bg-white w16 h16"></div>
+</div>
+<div class="w200 h200 bg-blue relative inline-block">
+ <div class="bg-red absolute absolute--fill m-auto w16 h16"></div>
+</div>
+<div class="w200 h200 bg-blue relative inline-block" style="overflow: auto">
+ <div class="bg-red w16 hp100 m0-auto"></div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;wp100 h200 bg-red flex-center&quot;&gt;
+ &lt;div class&#x3D;&quot;bg-white w16 h16&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;w200 h200 bg-blue relative inline-block&quot;&gt;
+ &lt;div class&#x3D;&quot;bg-red absolute absolute--fill m-auto w16 h16&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;w200 h200 bg-blue relative inline-block&quot; style&#x3D;&quot;overflow: auto&quot;&gt;
+ &lt;div class&#x3D;&quot;bg-red w16 hp100 m0-auto&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-layout-zextra-float">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>175</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-zextra-float">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.4.2</span>
+                  <span class="kss-section__name">Float</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>.float-left, .float-right</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-layout-zextra-text">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>188</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-zextra-text">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.4.3</span>
+                  <span class="kss-section__name">Text</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>.left-align, .right-align, .center</p>
+</div>
+
+            </article>
+
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

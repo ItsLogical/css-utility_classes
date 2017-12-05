@@ -1,0 +1,200 @@
+// Display types
+//
+// Quick classes to change the display
+// <ul><li>.inline</li><li>.inline-block</li><li>.block</li><li>.hidden</li><ul>
+//
+// Markup:
+// <div class="h50 bg-blue">
+//  <div class="p16 bg-red inline-block">Example</div>
+// </div>
+//
+//
+// Styleguide Layout.display
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+// Positioning
+//
+// Quick classes to change the position
+// <ul><li>.fixed</li><li>.absolute</li><li>.relative</li></ul>
+// 
+// Markup:
+// <div class="h128 bg-blue relative">
+//  <div class="p16 bg-red inline-block">Example</div>
+//  <div class="p16 bg-yellow inline-block absolute r0">Example</div>
+//  <div class="p16 bg-green inline-block absolute b0 l0">Example</div>
+//  <div class="p16 bg-purple inline-block absolute b0 r0">Example</div>
+//  <div class="p16 bg-black inline-block absolute b64 l256">Example</div>
+// </div>
+//
+//
+// Styleguide Layout.position
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+// Absolute
+//
+// Absolute classes can use .tX .bX .lX .rX to change the top, bottom, left, right values
+// <p class="note fsp80">Supported sizes: 0, 4, 8, 16, 32, 64, 128, 256, 512</p>
+//
+//
+// Styleguide Layout.position.absolute
+.absolute {
+    position: absolute;
+}
+.absolute--fill {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+$supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
+@each $size in $supported_sizes {
+    .b#{$size} {
+        bottom: $size + px;
+    }
+    .t#{$size} {
+        top: $size + px;
+    }
+    .r#{$size} {
+        right: $size + px;
+    }
+    .l#{$size} {
+        left: $size + px;
+    }
+}
+
+
+// Flex
+//
+// .flex, .space-between, .flex-shrink, .flex-grow, .flex-column, .flex-center
+//
+//
+// Styleguide Layout.Flex
+.flex {
+    display: flex;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// same as: .flex, .flexboxgrid.row
+.flex-row {
+    display: flex;
+}
+
+
+// Extra
+//
+//
+//
+// Styleguide Layout.zextra
+
+// Center
+//
+// <ul>
+//  <li>.m-auto@child - absolute centering </li>
+//  <li>.m0-auto@child - horizontal centering (block in block)</li>
+//  <li>.center@parent - horizontal centering (inline in block)</li>
+//  <li>.flex-center@parent - centers everything</li>
+// </ul>
+//
+// Markup:
+// <div class="wp100 h200 bg-red flex-center">
+//  <div class="bg-white w16 h16"></div>
+// </div>
+// <div class="w200 h200 bg-blue relative inline-block">
+//  <div class="bg-red absolute absolute--fill m-auto w16 h16"></div>
+// </div>
+// <div class="w200 h200 bg-blue relative inline-block" style="overflow: auto">
+//  <div class="bg-red w16 hp100 m0-auto"></div>
+// </div>
+//
+// Styleguide Layout.zextra.center
+.m-auto {
+    margin: auto;
+}
+
+.m0-auto {
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+.flex-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-start {
+  align-self: flex-start;
+}
+.flex-end {
+  align-self: flex-end;
+}
+
+// Float
+//
+// .float-left, .float-right
+//
+//
+// Styleguide Layout.zextra.float
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+// Text
+//
+// .left-align, .right-align, .center
+//
+//
+// Styleguide Layout.zextra.text
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
