@@ -29,16 +29,22 @@
 //
 // Styleguide Fonts.sizequick
 .smaller {
-  font-size: 0.8em;
+  @extend .s1;
 }
 .bigger {
-  font-size: 1.2em;
+  @extend .t4; 
 }
 
 // Relative fontsizes
 //
 // Use these classes to quicky change the fontsize <br/>
-// <p class="note s1">Supported sizes: 20, 40, 60, 80, 120, 140, 160, 180, 200, 250, 300, 400, 500</p>
+// <ul>
+//  <li>.t1 - largest font</li>
+//  <li>.t2 - second largest font</li>
+//  <li>.t4 - fourth largest font</li>
+//  <li>.s1 - first font smaller than normal</li>
+//  <li>.s2 - second font smaller than normal</li>
+// </ul>
 //
 // Markup:
 // <div>

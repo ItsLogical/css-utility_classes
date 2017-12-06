@@ -57,7 +57,7 @@
 // Absolute
 //
 // Absolute classes can use .tX .bX .lX .rX to change the top, bottom, left, right values
-// <p class="note fsp80">Supported sizes: 0, 4, 8, 16, 32, 64, 128, 256, 512</p>
+// <p class="note s1">Supported sizes: 0, 4, 8, 16, 32, 64, 128, 256, 512</p>
 //
 //
 // Styleguide Layout.position.absolute
@@ -92,6 +92,19 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 //
 // .flex, .space-between, .flex-shrink, .flex-grow, .flex-column, .flex-center
 //
+// Markup:
+// <div class="flex-row">
+//   <div class="w100 bg-red flex-center">LOGO</div>
+//   <div class="bg-green p4 flex-grow space-around"><button class="button">Menu1</button><button class="button">Menu2</button><button class="button">Menu3</button></div>
+// </div>
+// <div class="flex-row">
+//   <div class="w100 bg-gray flex-column">
+//     <div class="bg-blue">1</div><div class="bg-green flex-grow">2</div><div class="bg-red">3</div>
+//   </div>
+//   <div class="bg-yellow flex-grow">
+//      <h1 class="title h128">Test text</h1>
+//   </div>
+// </div>
 //
 // Styleguide Layout.Flex
 .flex {
@@ -101,6 +114,10 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 .space-between {
     display: flex;
     justify-content: space-between;
+}
+.space-around {
+    display: flex;
+    justify-content: space-around;
 }
 
 .flex-shrink {

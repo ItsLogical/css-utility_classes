@@ -45,14 +45,20 @@
             </a>
                 <ul class="kss-nav__subnav">
                     <li class="kss-nav__item ">
-                      <a href="section-button.html#kssref-button-sizes">
+                      <a href="section-button.html#kssref-button-effects">
                         <span class="kss-nav__ref">1.1</span>
+                        <span class="kss-nav__name">Effect</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-button.html#kssref-button-sizes">
+                        <span class="kss-nav__ref">1.2</span>
                         <span class="kss-nav__name">Sizes</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
                       <a href="section-button.html#kssref-button-styles">
-                        <span class="kss-nav__ref">1.2</span>
+                        <span class="kss-nav__ref">1.3</span>
                         <span class="kss-nav__name">Styles</span>
                       </a>
                     </li>
@@ -116,7 +122,7 @@
             <header class="kss-section kss-section--depth-1" id="kssref-button">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>6</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button">
                 <h1 class="kss-section__item kss-section__item--depth-1">
@@ -132,14 +138,46 @@
 
 
             </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-button-effects">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>75</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-button-effects">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">1.1</span>
+                  <span class="kss-section__name">Effect</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><button class="button button--fade bg-green">Sample button</button>
+<button class="button button--darken darken--light bg-green">Sample button</button>
+<button class="button button--press button--curve bg-green">Sample button</button></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--fade bg-green&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--darken darken--light bg-green&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--press button--curve bg-green&quot;&gt;Sample button&lt;/button&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-2" id="kssref-button-sizes">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>7</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>12</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button-sizes">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">1.1</span>
+                  <span class="kss-section__ref">1.2</span>
                   <span class="kss-section__name">Sizes</span>
                 </h2>
               </a>
@@ -154,7 +192,7 @@
                 <div class="kss-modifiers__example"><button class="button button--xs bg-yellow border-black">Sample button</button>
 <button class="button button--sm bg-green">Sample button</button>
 <button class="button button--md bg-red">Sample button</button>
-<button class="button button--lg bg-blue">Sample button</button>
+<button class="button button--lg bg-blue underline-black">Sample button</button>
 <button class="button button--xl bg-white border-black">Sample button</button></div>
 
               </article>
@@ -163,7 +201,7 @@
                   <pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--xs bg-yellow border-black&quot;&gt;Sample button&lt;/button&gt;
 &lt;button class&#x3D;&quot;button button--sm bg-green&quot;&gt;Sample button&lt;/button&gt;
 &lt;button class&#x3D;&quot;button button--md bg-red&quot;&gt;Sample button&lt;/button&gt;
-&lt;button class&#x3D;&quot;button button--lg bg-blue&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--lg bg-blue underline-black&quot;&gt;Sample button&lt;/button&gt;
 &lt;button class&#x3D;&quot;button button--xl bg-white border-black&quot;&gt;Sample button&lt;/button&gt;</code></pre>
                 </article>
 
@@ -171,11 +209,11 @@
             <section class="kss-section kss-section--depth-2" id="kssref-button-styles">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>44</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>51</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button-styles">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">1.2</span>
+                  <span class="kss-section__ref">1.3</span>
                   <span class="kss-section__name">Styles</span>
                 </h2>
               </a>
@@ -187,16 +225,18 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button class="button button--curve bg-green">Sample button</button>
-<button class="button button--round bg-green w32 h32">K</button>
-<button class="button button--round bg-red white w128 h128 fsp200">Big</button></div>
+                <div class="kss-modifiers__example"><button class="button button--box bg-green">Sample button</button>
+<button class="button button--curve bg-green">Sample button</button>
+<button class="button button--pill bg-blue">Sample button</button>
+<button class="button button--round button--hover bg-red white w64 h64 t4">Big</button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--curve bg-green&quot;&gt;Sample button&lt;/button&gt;
-&lt;button class&#x3D;&quot;button button--round bg-green w32 h32&quot;&gt;K&lt;/button&gt;
-&lt;button class&#x3D;&quot;button button--round bg-red white w128 h128 fsp200&quot;&gt;Big&lt;/button&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--box bg-green&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--curve bg-green&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--pill bg-blue&quot;&gt;Sample button&lt;/button&gt;
+&lt;button class&#x3D;&quot;button button--round button--hover bg-red white w64 h64 t4&quot;&gt;Big&lt;/button&gt;</code></pre>
                 </article>
 
             </section>

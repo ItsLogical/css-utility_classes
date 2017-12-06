@@ -3,7 +3,7 @@
 // Use this class to change the background color
 //
 // Markup:
-// <div class="bg-red p16">Red div</div>
+// <div class="bg-grad-red p16">Red div</div>
 // <div class="bg-white p16">White div</div>
 // <div class="bg-blue p16">Blue div</div>
 // <div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
@@ -19,7 +19,7 @@
 //
 // Markup:
 // <h1 class="red">Red text</h1>
-// <h1 class="purple">Purple text</h1>
+// <h1 class="grad-purple">Purple gradient text</h1>
 //
 //
 // Styleguide Colors.font
@@ -74,7 +74,12 @@
         left:0;
         background:rgba(0,0,0,0.5);
     }
+
+    &.darken--light:after {
+        background:rgba(0,0,0,0.25);
+    }
 }
+
 
 .bg-lighten {
     position: relative;
@@ -86,5 +91,16 @@
         top:0;
         left:0;
         background:rgba(255,255,255,0.5);
+    }
+}
+
+@each $colorName, $colorValue in $gradients {
+    .grad-#{$colorName} {
+        background: $colorValue;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .bg-grad-#{$colorName} {
+        background: $colorValue;
     }
 }

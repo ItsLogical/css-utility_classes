@@ -1,7 +1,7 @@
 // Widths and Heights
 //
 // Use these classes to specify a width or height to elements <br/>
-//<p class="note fsp80">Supported sizes: 0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512</p>
+//<p class="note s1">Supported sizes: 0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512</p>
 //
 // Markup:
 // <div class="bg-blue w16 h16 inline"></div>
@@ -15,12 +15,12 @@
 // Margins and Paddings
 //
 // Use these classes to specify margins and paddings to elements <br/>
-// <p class="note fsp80">Supported sizes: 0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512</p>
+// <p class="note s1">Supported sizes: 0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512</p>
 //
 // Markup:
 // <div class="bg-blue full-width h8 mb4"></div>
 // <div class="bg-red full-width h8 mb4"></div>
-// <div class="bg-yellow w256 h8 mr4 inline"></div><div class="bg-green w256 h8 mr4 inline"></div><div class="bg-black w256 h8 mr4 inline"></div>
+// <div class="bg-yellow w256 h8 mr4 inline-block"></div><div class="bg-green w256 h8 mr4 inline-block"></div><div class="bg-black w256 h8 mr4 inline-block"></div>
 //
 // Styleguide Sizes.spacings
 
