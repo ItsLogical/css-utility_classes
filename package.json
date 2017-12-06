@@ -1,13 +1,13 @@
 {
-  "name": "itl-css-attribute_classes",
+  "name": "itl-css-utility_classes",
   "version": "2.0.0",
-  "description": "ITL css-attribute_classes",
+  "description": "ITL css-utility_classes",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp watch",
     "watch": "onchange './source/scss/**/*.scss' -- npm run kss",
-    "kss": "kss --source ./source/scss/ --destination ./public/styleguide --css ../css/itl-attribute_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL attribute_classes' --homepage ../../README.md"
+    "kss": "kss --source ./source/scss/ --destination ./public/styleguide --css ../css/itl-utility_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL utility_classes' --homepage ../../README.md"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "ITL",
     "CSS",
     "prototyping",
-    "attribute_classes"
+    "utility_classes"
   ],
   "author": "Kishan Nirghin",
   "license": "ISC",
