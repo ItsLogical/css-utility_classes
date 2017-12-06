@@ -1,4 +1,4 @@
-[View styleguide](https://kishanjay.github.io/css-attribute_classes/public/styleguide/)
+[View styleguide](https://itslogical.github.io/css-utility_classes/)
 
 # [ITL] CSS utility_classes
 This css file contains lots of handy classes that will improve the efficiency of prototyping webdevelopment.
