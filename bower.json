@@ -1,6 +1,6 @@
 {
   "name": "itl-css-utility_classes",
-  "description": "ITL css-utility_classes",
+  "description": "ITL css-utility_classes, prototyping classes",
   "main": "gulpfile.js",
   "authors": [
     "Kishan Nirghin"
@@ -12,7 +12,7 @@
     "prototyping",
     "utility_classes"
   ],
-  "homepage": "https://github.com/Kishanjay/css-attribute_classes",
+  "homepage": "https://github.com/ItsLogical/css-utility_classes",
   "ignore": [
     "**/.*",
     "node_modules",

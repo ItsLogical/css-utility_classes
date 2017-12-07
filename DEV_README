@@ -1,0 +1,10 @@
+Every stable version should be published on Bower and NPM
+
+
+---- BOWER ----
+REGISTER PACKAGE
+bower register itl-css-utility_classes git://github.com/ItsLogical/css-utility_classes.git
+
+ADD NEW SEMVER TAG
+
+---- ----- ----
