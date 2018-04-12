@@ -1,4 +1,4 @@
-[View styleguide](https://itslogical.github.io/css-utility_classes/public/styleguide/)
+[View styleguide](https://itslogical.github.io/css-utility_classes/dist/styleguide/)
 
 # [ITL] CSS utility_classes
 This css file contains lots of handy classes that will improve the efficiency of prototyping webdevelopment.
@@ -49,10 +49,11 @@ Do this:
 }
 ```
 
-DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.
 
 ### Changelog
 | version | description     | note(s)                                                          |
 |---------|-----------------|------------------------------------------------------------------|
 | v1.0.0  | initial release | very basic utility classes                                       |
 | v2.0.0  | refactoring     | breaks previous dependencies as the folder structure has changed |
+
+DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.
