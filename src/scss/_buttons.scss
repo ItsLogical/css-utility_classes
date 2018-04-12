@@ -1,0 +1,147 @@
+/**
+ * The buttons should only be a base style
+ *  any real production button should preferably be built on top of / replacing these. 
+ */
+
+// Buttons
+//
+// Improvement uppon the default buttons. Buttons as they should be. 
+//
+// Markup:
+// <button>Normal button</button><button class="button border-black">Utility button</button>
+// 
+// Styleguide Button
+
+// Sizes
+//
+// use the BEM modifiers to change the default button sizes:
+// <ul>
+// <li>.button--xs: smallest button in the book</li>
+// <li>.button--sm: still smaller than default</li>
+// <li>.button--md: actually the default</li>
+// <li>.button--lg: bigger than default</li>
+// <li>.button--xl: pretty big</li>
+// <li>.button--wide: wider than default</li>
+// <li>.button--wider: much wider than default</li>
+// </ul>
+// 
+// Markup:
+// <button class="button--xs button bg-yellow">Sample button</button>
+// <button class="button--sm button bg-green">Sample button</button>
+// <button class="button--md button bg-red">Sample button</button>
+// <button class="button--lg button bg-blue">Sample button</button>
+// <button class="button--xl button bg-white">Sample button</button>
+//
+//
+// Styleguide Button.sizes
+.button {
+    @extend .no-select;
+    @extend .clickable;
+    display: inline-block;
+    padding: 12px 16px;
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+// NOTE: The button sizes can still be tweaked and optimized.
+.button--xs {
+    padding: 4px !important;
+}
+.button--sm {
+    padding: 8px 10px !important;
+}
+.button--md {
+
+}
+.button--lg {
+    padding: 16px 32px !important;
+}
+.button--xl {
+    padding: 24px 64px !important;
+}
+.button--wide {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+.button--wider {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+// Styles
+//
+// Add appearance styles to buttons
+// <ul>
+// <li>.button--flat: removes the border-radius</li>
+// <li>.button--curve: adds a border-radius</li>
+// <li>.button--pill: makes the button pill shaped</li>
+// <li>.button--round: makes the button circle shaped 
+//      <span class="note">Should be used in combination with fixed width and height</span></li>
+// </ul>
+//
+// Markup:
+// <button class="button--flat button bg-green">Sample button</button>
+// <button class="button--curve button bg-green">Sample button</button>
+// <button class="button--pill button bg-blue">Sample button</button>
+// <button class="button--round w64 h64 button bg-red">Big</button>
+//
+//
+// Styleguide Button.styles
+.button--flat {
+    border-radius: 0px !important;
+}
+.button--curve {
+    border-radius: 8px !important;
+}
+.button--pill {
+    border-radius: 20px !important;
+}
+.button--round {
+    @extend .flex-center;
+    border-radius: 50%;
+}
+
+// Effects
+//
+// Add hover-effects to buttons
+// <ul>
+// <li>.button--fade: fades the button opacity <span class="note">(.button--lighten)</span></li>
+// <li>.button--darken: darkens the button bg <span class="note">(can also be used with darken--light)</span></li>
+// <li>.button--press: gives a 3d effect to a button <span class="note">(.button--3d)</span></li>
+// </ul>
+//
+// Markup:
+// <button class="button--fade button bg-green">Sample button</button>
+// <button class="button--darken button bg-green">Sample button</button>
+// <button class="button--darken darken--light button bg-green">Sample button</button>
+// <button class="button--press button bg-green">Sample button</button>
+//
+//
+// Styleguide Button.Effects
+.button--fade, .button--lighten {
+    transition: 0.2s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.button--darken {
+    transition: 0.2s;
+    &:hover {
+        @extend .bg-darken;
+    }
+}
+.button--press, .button--3d {
+    --button-shadow-color: color(black);
+    box-shadow: 0 3px var(--button-shadow-color);
+    &:hover {
+        box-shadow: 0 2px var(--button-shadow-color);
+        transform: translateY(1px);
+    }
+    &:active {
+        box-shadow: 0 0px var(--button-shadow-color);
+        transform: translateY(3px);
+    }
+}

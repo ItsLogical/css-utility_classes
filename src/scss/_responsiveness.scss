@@ -1,0 +1,215 @@
+/* https://responsivedesign.is/develop/getting-started-with-sass-and-breakpoint-mixin/ */
+
+// NOTE: breakpoints set to be consistent with flexboxgrid
+@mixin breakpoint($point) {
+    @if $point==lg {
+        @media (min-width: 75em) {
+            // 1200px
+            @content ;
+        }
+    }
+    @else if $point==md {
+        @media (min-width: 64em) {
+            // 1024px
+            @content ;
+        }
+    }
+    @else if $point==sm {
+        @media (min-width: 48em) {
+            // 768px
+            @content ;
+        }
+    }
+    @else if $point==xs {
+        @content ;
+    }
+}
+
+// Responsiveness
+//
+// Wrap content into containers to make it responsive
+// Default containers max-width: 1200px
+//
+// <ul>
+// <li>.container--small: max-width: 800px </li>
+// <li>.container--medium: max-width: 1000px </li>
+// </ul>
+//
+// Markup:
+// <div class="container bg-white">
+//  <h2>Nice container u got there</h2>
+// </div>
+// <div class="container container--small bg-white">
+//  <h2>Nice small container u got there</h2>
+// </div>
+//
+//
+// Styleguide Responsiveness
+.container {
+    @include breakpoint(xs) {
+        width: 100%;
+    }
+    @include breakpoint(sm) {
+        width: 800px;
+    }
+    @include breakpoint(md) {
+        width: 1000px;
+    }
+    @include breakpoint(lg) {
+        width: 1200px;
+    }
+}
+
+.container--small {
+    max-width: 800px;
+}
+.container--medium {
+    max-width: 1000px;
+}
+.container--large { // default container
+    max-width: inherit;
+}
+
+// Visibility
+//
+// <span class="note">Made with flexboxgrid compatibility</span>
+// <table class="table table--bordered">
+//  <tr><th></th>               <th>&lt; 768px</th>         <th>&lt; 1024px</th>        <th>&lt; 1200px</th>        <th>&gt; 1200px</th></tr>
+//  <tr><th>.hide-xs<br/>
+//          .hide-xs-only</th>  <td></td>                   <td class="bg-green"></td>  <td class="bg-green"></td>  <td class="bg-green"></td></tr>
+//  <tr><th>.hide-sm</th>       <td></td>                   <td></td>                   <td class="bg-green"></td>  <td class="bg-green"></td></tr>
+//  <tr><th>.hide-md</th>       <td></td>                   <td></td>                   <td></td>                   <td class="bg-green"></td></tr>
+//
+//  <tr><th>.hide-sm-only</th>  <td class="bg-green"></td>  <td></td>                   <td class="bg-green"></td>  <td class="bg-green"></td></tr>
+//  <tr><th>.hide-md-only</th>  <td class="bg-green"></td>  <td class="bg-green"></td>  <td></td>                   <td class="bg-green"></td></tr>
+//  <tr><th>.hide-lg-only</th>  <td class="bg-green"></td>  <td class="bg-green"></td>  <td class="bg-green"></td>  <td></td></tr>
+//
+//  <tr><th>.show-xs</th>       <td class="bg-green"></td>  <td></td>                   <td></td>                   <td></td></tr>
+//  <tr><th>.show-sm</th>       <td class="bg-green"></td>  <td class="bg-green"></td>  <td></td>                   <td></td></tr>
+//  <tr><th>.show-md</th>       <td class="bg-green"></td>  <td class="bg-green"></td>  <td class="bg-green"></td>  <td></td></tr>
+//
+//  <tr><th>.show-xs-only</th>  <td class="bg-green"></td>  <td></td>                   <td></td>                   <td></td></tr>
+//  <tr><th>.show-sm-only</th>  <td></td>                   <td class="bg-green"></td>  <td></td>                   <td></td></tr>
+//  <tr><th>.show-md-only</th>  <td></td>                   <td></td>                   <td class="bg-green"></td>  <td></td></tr>
+//  <tr><th>.show-lg-only</th>  <td></td>                   <td></td>                   <td></td>                   <td class="bg-green"></td></tr>
+// </table>
+//
+// Markup:
+// <div class="bg-red show-sm">Small screens</div>
+// <div class="bg-blue hide-sm">Big screens</div>
+// <div class="bg-purple show-lg-only">lg only</div>
+// <div class="bg-white show-sm-only">Sm only</div>
+//
+//
+// Styleguide Responsiveness.visibilty
+.hide-xs,
+.hide-xs-only {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(sm) {
+        display: inherit;
+    }
+}
+
+.hide-sm {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(md) {
+        display: inherit;
+    }
+}
+
+.hide-md {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(lg) {
+        display: inherit;
+    }
+}
+
+.hide-sm-only {
+    @include breakpoint(sm) {
+        display: none;
+    }
+    @include breakpoint(md) {
+        display: inherit;
+    }
+}
+
+.hide-md-only {
+    @include breakpoint(md) {
+        display: none;
+    }
+    @include breakpoint(lg) {
+        display: inherit;
+    }
+}
+
+.hide-lg-only {
+    @include breakpoint(xs) {
+        display: block;
+    }
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.show-xs {
+    @include breakpoint(sm) {
+        display: none;
+    }
+}
+
+.show-sm {
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.show-md {
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.show-xs-only {
+    @include breakpoint(sm) {
+        display: none;
+    }
+}
+
+.show-sm-only {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(sm) {
+        display: inherit;
+    }
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.show-md-only {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(md) {
+        display: inherit;
+    }
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.show-lg-only {
+    @include breakpoint(xs) {
+        display: none;
+    }
+    @include breakpoint(lg) {
+        display: inherit;
+    }
+}

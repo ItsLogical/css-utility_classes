@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ITL utility_classes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/itl-utility_classes.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">ITL utility_classes</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">ITL utility_classes</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-button.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Buttons</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-colors.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Colors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-fonts.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Fonts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layout</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-lists.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Lists</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-responsiveness.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Responsiveness</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-sizes.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Sizes</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-sizes.html#kssref-sizes-dimensions">
+                        <span class="kss-nav__ref">7.1</span>
+                        <span class="kss-nav__name">Widths and Heights</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-sizes.html#kssref-sizes-spacings">
+                        <span class="kss-nav__ref">7.2</span>
+                        <span class="kss-nav__name">Margins and Paddings</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-table.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Table</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-zmisc.html">
+              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__name">Misc</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-sizes">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-sizes">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">7</span>
+                  <span class="kss-section__name">Sizes</span>
+                </h1>
+              </a>
+
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-sizes-dimensions">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_sizes.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-sizes-dimensions">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">7.1</span>
+                  <span class="kss-section__name">Widths and Heights</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p><ul></p>
+<p><li>w&lt;X&gt;: sets width to X</li></p>
+<p><li>h&lt;X&gt;: sets height to X</li></p>
+<p><li>.full-width, .wp100: sets width to 100%</li></p>
+<p><li>.full-height, .hp100: sets height to 100%</li>
+</ul></p>
+<p>X should be in: [0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512]</p></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="bg-blue w16 h16 inline-block"></div>
+<div class="bg-yellow w32 h16 inline-block"></div>
+<div class="bg-red w64 h32 inline-block"></div>
+<div class="bg-green full-width h8"></div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;bg-blue w16 h16 inline-block&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-yellow w32 h16 inline-block&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-red w64 h32 inline-block&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-green full-width h8&quot;&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-sizes-spacings">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_sizes.scss</span>, line <span>20</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-sizes-spacings">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">7.2</span>
+                  <span class="kss-section__name">Margins and Paddings</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p><ul></p>
+<p><li>p&lt;X&gt;: sets padding to X</li></p>
+<p><li>pt&lt;X&gt;: sets padding-top to X</li></p>
+<p><li>pr&lt;X&gt;: sets padding-right to X</li></p>
+<p><li>pb&lt;X&gt;: sets padding-bottom to X</li></p>
+<p><li>pl&lt;X&gt;: sets padding-left to X</li></p>
+<p><li>m&lt;X&gt;: sets margin to X</li></p>
+<p><li>mt&lt;X&gt;: sets margin-top to X</li></p>
+<p><li>mr&lt;X&gt;: sets margin-right to X</li></p>
+<p><li>mb&lt;X&gt;: sets margin-bottom to X</li></p>
+<p><li>ml&lt;X&gt;: sets margin-left to X</li>
+</ul></p>
+<p>X should be in: [0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512]</p></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="bg-blue full-width h8 mb4"></div>
+<div class="bg-red full-width h8 mb4"></div>
+<div class="bg-yellow w256 h8 mr4 inline-block"></div><div class="bg-green w256 h8 mr4 inline-block"></div><div class="bg-black w256 h8 mr4 inline-block"></div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;bg-blue full-width h8 mb4&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-red full-width h8 mb4&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-yellow w256 h8 mr4 inline-block&quot;&gt;&lt;/div&gt;&lt;div class&#x3D;&quot;bg-green w256 h8 mr4 inline-block&quot;&gt;&lt;/div&gt;&lt;div class&#x3D;&quot;bg-black w256 h8 mr4 inline-block&quot;&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

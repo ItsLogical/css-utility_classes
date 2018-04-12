@@ -1,0 +1,99 @@
+// Widths and Heights
+//
+// <ul>
+// <li>w&lt;X&gt;: sets width to X</li>
+// <li>h&lt;X&gt;: sets height to X</li>
+// <li>.full-width, .wp100: sets width to 100%</li>
+// <li>.full-height, .hp100: sets height to 100%</li>
+// </ul>
+// <p>X should be in: [0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512]</p>
+//
+// Markup:
+// <div class="bg-blue w16 h16 inline-block"></div>
+// <div class="bg-yellow w32 h16 inline-block"></div>
+// <div class="bg-red w64 h32 inline-block"></div>
+// <div class="bg-green full-width h8"></div>
+//
+// Styleguide Sizes.dimensions
+
+
+// Margins and Paddings
+//
+// <ul>
+// <li>p&lt;X&gt;: sets padding to X</li>
+// <li>pt&lt;X&gt;: sets padding-top to X</li>
+// <li>pr&lt;X&gt;: sets padding-right to X</li>
+// <li>pb&lt;X&gt;: sets padding-bottom to X</li>
+// <li>pl&lt;X&gt;: sets padding-left to X</li>
+// <li>m&lt;X&gt;: sets margin to X</li>
+// <li>mt&lt;X&gt;: sets margin-top to X</li>
+// <li>mr&lt;X&gt;: sets margin-right to X</li>
+// <li>mb&lt;X&gt;: sets margin-bottom to X</li>
+// <li>ml&lt;X&gt;: sets margin-left to X</li>
+// </ul>
+// <p>X should be in: [0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512]</p>
+//
+// Markup:
+// <div class="bg-blue full-width h8 mb4"></div>
+// <div class="bg-red full-width h8 mb4"></div>
+// <div class="bg-yellow w256 h8 mr4 inline-block"></div><div class="bg-green w256 h8 mr4 inline-block"></div><div class="bg-black w256 h8 mr4 inline-block"></div>
+//
+// Styleguide Sizes.spacings
+
+
+$supported_sizes: (0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512);
+
+/* low priorities */
+@each $size in $supported_sizes {
+    /* margin & padding */
+    .m#{$size} {
+        margin: $size + px;
+    }
+    .p#{$size} {
+        padding: $size + px;
+    }
+    /* width & height */
+    .w#{$size} {
+        width: $size + px;
+    }
+    .h#{$size} {
+        height: $size + px;
+    }
+}
+/* higher priorities */
+@each $size in $supported_sizes {  
+    .mt#{$size} {
+        margin-top: $size + px !important;
+    }
+    .mb#{$size} {
+        margin-bottom: $size + px !important;
+    }
+    .ml#{$size} {
+        margin-left: $size + px !important;
+    }
+    .mr#{$size} {
+        margin-right: $size + px !important;
+    }
+    
+    .pl#{$size} {
+        padding-left: $size + px !important;
+    }
+    .pr#{$size} {
+        padding-right: $size + px !important;
+    }
+    .pt#{$size} {
+        padding-top: $size + px !important;
+    }
+    .pb#{$size} {
+        padding-bottom: $size + px !important;
+    }
+}
+
+
+.full-width, .wp100 {
+    width: 100% !important;
+}
+
+.full-height, .hp100 {
+    height: 100% !important;
+}

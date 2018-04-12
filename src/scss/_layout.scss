@@ -1,0 +1,270 @@
+// Display types
+//
+// Quick classes to change the display
+// <ul>
+// <li>.inline: display: inline</li>
+// <li>.inline-block: display: inline-block</li>
+// <li>.block: display: block</li>
+// <li>.hidden: display: none</li>
+// </ul>
+//
+// Markup:
+// <div class="h50 bg-blue">
+//  <div class="inline-block p16 bg-red">Example</div>
+// </div>
+//
+//
+// Styleguide Layout.display
+.inline {
+    display: inline !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.border-box {
+    box-sizing: border-box !important;
+}
+
+// Positioning
+//
+// Quick classes to change the position
+// <ul>
+// <li>.fixed: position: fixed</li>
+// <li>.absolute: position: absolute</li>
+// <li>.relative: position: relative</li>
+// </ul>
+// 
+// Markup:
+// <div class="relative bg-red p64">Relative container div
+//  <div class="bg-yellow"> Normal div </div>
+//  <div class="absolute t0 bg-blue">Absolute top div</div>
+// </div>
+//
+//
+// Styleguide Layout.eposition
+.fixed {
+    position: fixed !important;
+}
+.relative {
+    position: relative !important;
+}
+.absolute {
+    position: absolute !important;
+}
+
+// Placement
+//
+// To change position of fixed and absolute elements use these classes:
+// <ul>
+// <li>.t&lt;X&gt;: Changes the top value to X</li>
+// <li>.r&lt;X&gt;: Changes the right value to X</li>
+// <li>.b&lt;X&gt;: Changes the bottom value to X</li>
+// <li>.l&lt;X&gt;: Changes the left value to X</li>
+// <li>.absolute--fill: makes an absolute element fill its relative parent</li>
+// </ul>
+// <p>X should be in: [0, 4, 8, 16, 32, 64, 128, 256, 512]</p>
+//
+//
+// Styleguide Layout.eposition.placement
+.absolute--fill {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+$supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
+@each $size in $supported_sizes {
+    .b#{$size} {
+        bottom: $size + px;
+    }
+    .t#{$size} {
+        top: $size + px;
+    }
+    .r#{$size} {
+        right: $size + px;
+    }
+    .l#{$size} {
+        left: $size + px;
+    }
+}
+
+
+// Flex
+//
+// <ul>
+// <li>.flex: sets display to flex</li>
+// <li>.flex-column: creates a flex column</li>
+// <li>.flex-row: creates a flex row</li>
+//
+// <li>.flex-shrink: makes the ele shrinkable to fit flexparent</li>
+// <li>.flex-grow: makes the ele consume empty space of flexparent</li>
+//
+// <li>.flex-start: places the ele at start of flexparent</li>
+// <li>.flex-end: places the ele at the end of flexparent</li>
+// <li>.flex-center: places its child at the center</li>
+// </ul>
+//
+// Markup:
+// <div class="flex-row">
+//   <div class="flex-center w100 bg-red">LOGO</div>
+//   <div class="flex-grow flex-end  bg-green p4"> Menu </div>
+// </div>
+// <div class="flex-row">
+//   <div class="flex-column w100">
+//     <div class="bg-blue">1</div><div class="flex-grow bg-green">2</div><div class="bg-blue">3</div>
+//   </div>
+//   <div class="flex-grow bg-yellow">
+//      <h1 class="title h128">Test text</h1>
+//   </div>
+// </div>
+//
+// Styleguide Layout.Flex
+.flex {
+    display: flex !important;
+}
+.flex-row {
+    @extend .flex;
+    flex-direction: row !important;
+}
+.flex-column, .flex--column {
+    @extend .flex;
+    flex-direction: column !important;
+}
+.flex-shrink {
+    flex-shrink: 1 !important;
+}
+.flex-grow {
+    flex-grow: 1 !important;
+}
+.flex-start {
+    align-self: flex-start;
+}
+.flex-end {
+    align-self: flex-end;
+}
+.flex-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// Spacing
+//
+//
+// <ul>
+// <li>.space-between: justify-content: space-between</li>
+// <li>.space-around: justify-content: space-around</li>
+// </ul>
+//
+// Markup:
+// <div class="space-between bg-eee">
+// <button class="button">cta1</button><button class="button">cta2</button><button class="button">cta3</button>
+// </div>
+// <div class="space-around bg-gray">
+// <button class="button">cta1</button><button class="button">cta2</button><button class="button">cta3</button>
+// </div>
+//
+// Styleguide Layout.Spacing
+.space-between {
+    display: flex;
+    justify-content: space-between !important;
+}
+.space-around {
+    display: flex;
+    justify-content: space-around !important;
+}
+
+// e.g. items in a row with an un equal height will be on the same baseline
+// handy for in navbars
+
+
+
+// Other
+//
+//
+//
+// Styleguide Layout.zother
+
+// Centering
+//
+// <ul>
+//  <li>.m-auto: absolute centering (block in block)@child</li>
+//  <li>.m0-auto: horizontal center (block in block)@child</li>
+//  <li>.center: horizontal center (inline in block)@parent</li>
+//  <li>.flex-center: centers everything @parent</li>
+//  <li>.items-center: horizontal centering baseline@parent</li>
+// </ul>
+//
+// Markup:
+// <div class="flex-center wp100 h200 bg-red">
+//  <div class="bg-white w16 h16"></div>
+// </div>
+// <div class="relative inline-block w200 h200 bg-blue">
+//  <div class="absolute absolute--fill m-auto bg-red w16 h16"></div>
+// </div>
+// <div class="relative inline-block w200 h200 bg-blue">
+//  <div class="m0-auto bg-red w16 hp100"></div>
+// </div>
+//
+// Styleguide Layout.zother.centering
+.m-auto {
+    margin: auto;
+}
+
+.m0-auto {
+    margin: 0 auto;
+}
+.center, .align-center {
+    text-align: center !important;
+}
+.items-center {
+    align-items: center !important;
+}
+
+// Floating
+//
+// <ul>
+// <li>.float-left: float: left</li>
+// <li>.float-right: float: right</li>
+// </ul>
+//
+//
+// Styleguide Layout.zother.float
+.float-left {
+    float: left !important;
+}
+.float-right {
+    float: right !important;
+}
+
+// Text align
+//
+// <ul>
+// <li>.left-align: left aligns text</li>
+// <li>.right-align: right aligns text</li>
+// <li>.center: centers text</li>
+// </ul>
+//
+//
+// Styleguide Layout.zother.text
+.left-align {
+    text-align: left !important;
+}
+.right-align {
+    text-align: right !important;
+}
+.center-align {
+    @extend .center;
+}

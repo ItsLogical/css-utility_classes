@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ITL utility_classes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/itl-utility_classes.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">ITL utility_classes</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">ITL utility_classes</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-button.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Buttons</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-colors.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Colors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-fonts.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Fonts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layout</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-lists.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Lists</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-responsiveness.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Responsiveness</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-sizes.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Sizes</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-table.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Table</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-zmisc.html">
+              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__name">Misc</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-layout-flex">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_layout.scss</span>, line <span>103</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-flex">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.3</span>
+                  <span class="kss-section__name">Flex</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><ul>
+<li>.flex: sets display to flex</li>
+<li>.flex-column: creates a flex column</li>
+<li>.flex-row: creates a flex row</li>
+
+<li>.flex-shrink: makes the ele shrinkable to fit flexparent</li>
+<li>.flex-grow: makes the ele consume empty space of flexparent</li>
+
+<li>.flex-start: places the ele at start of flexparent</li>
+<li>.flex-end: places the ele at the end of flexparent</li>
+<li>.flex-center: places its child at the center</li>
+</ul></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="flex-row">
+  <div class="flex-center w100 bg-red">LOGO</div>
+  <div class="flex-grow flex-end  bg-green p4"> Menu </div>
+</div>
+<div class="flex-row">
+  <div class="flex-column w100">
+    <div class="bg-blue">1</div><div class="flex-grow bg-green">2</div><div class="bg-blue">3</div>
+  </div>
+  <div class="flex-grow bg-yellow">
+     <h1 class="title h128">Test text</h1>
+  </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;flex-row&quot;&gt;
+  &lt;div class&#x3D;&quot;flex-center w100 bg-red&quot;&gt;LOGO&lt;/div&gt;
+  &lt;div class&#x3D;&quot;flex-grow flex-end  bg-green p4&quot;&gt; Menu &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex-row&quot;&gt;
+  &lt;div class&#x3D;&quot;flex-column w100&quot;&gt;
+    &lt;div class&#x3D;&quot;bg-blue&quot;&gt;1&lt;/div&gt;&lt;div class&#x3D;&quot;flex-grow bg-green&quot;&gt;2&lt;/div&gt;&lt;div class&#x3D;&quot;bg-blue&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;flex-grow bg-yellow&quot;&gt;
+     &lt;h1 class&#x3D;&quot;title h128&quot;&gt;Test text&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

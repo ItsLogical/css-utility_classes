@@ -1,0 +1,88 @@
+// Table
+//
+// Some simple table styles
+// <ul>
+// <li>.table: simple table styling</li>
+// <li>.table--bordered: adds a border to the table</li>
+// <li>.bordered--vertical: removes horizontal borders</li>
+// <li>.bordered--&lt;color&gt;: changes the border-color</li>
+// <li>.table--striped: gives the even and odd rows a different background</li>
+// <li>.striped\_\_odd--&lt;color&gt;: changes the bg-color of the odd rows</li>
+// <li>.striped\_\_even--&lt;color&gt;: changes the bg-color of the even rows</li>
+// <li>.table</li>
+// </ul>
+//
+// Markup:
+// <table class="table table--bordered bordered--blue inline-block ">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="table table--striped inline-block">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="table table--bordered bordered--vertical bordered--red inline-block">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+// <table class="inline-block table table--striped striped__odd--black striped__even--blue">
+//  <tr><th>Header1</th><th>Header2</th></tr>
+//  <tr><td>numero</td><td>sample</td></tr>
+//  <tr><td>extra</td><td>random</td></tr>
+// </table>
+//
+//
+// Styleguide Table
+.table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+    td, th {
+        padding: 16px;
+    }
+}
+
+.table--striped {
+    tr:nth-child(odd) {
+        @extend .bg-eee;
+    }
+
+    // different row-colors
+    @each $colorName, $colorValue in $colors {
+        &.striped__odd--#{$colorName} tr:nth-child(odd){
+            background-color: $colorValue !important;
+        }
+
+        &.striped__even--#{$colorName} tr:nth-child(even){
+            background-color: $colorValue !important;
+        }
+    }
+}
+
+
+.table--bordered {
+    th, td {
+        border: 1px solid black;
+    }
+
+    // different border-colors
+    @each $colorName, $colorValue in $colors {
+        &.bordered--#{$colorName} {
+            th, td {
+                border-color: $colorValue;
+            }
+        }
+    }
+
+    // different border-style
+    &.bordered--vertical {
+        th, td {
+            border-left-width: 0px;
+            border-right-width: 0px;
+        }
+    }
+}
+

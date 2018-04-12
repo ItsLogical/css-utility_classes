@@ -1,0 +1,102 @@
+// Misc
+//
+//
+// Styleguide zMisc
+
+// Clickable links
+//
+// <ul>
+// <li>.clickable: changes the cursor</li>
+// <li>.link: turns text into a link</li>
+// </ul>
+//
+// Markup:
+// <div class="bg-red w32 h32 clickable"></div>
+// <p class="link">This is a regular paragraph</p>
+//
+//
+// Styleguide zMisc.clickable
+.clickable {
+    cursor: pointer;
+}
+.link {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+        border-bottom: 1px solid color(blue);
+    }
+}
+
+// Not-allowed
+//
+// Use this class to make interaction with elements not-allowed
+//
+// Markup:
+// <div class="not-allowed bg-red w32 h32"></div>
+// <p class="not-allowed">This is a regular paragraph</p>
+//
+//
+// Styleguide zMisc.noclick
+.not-allowed {
+    cursor: not-allowed;
+}
+
+// Not selectable
+//
+// Use this class to make elements non selectable (press CTRL+A and you'll notice)
+// <ul>
+// <li>.no-select: makes element not selectable</li>
+// </ul>
+//
+// Markup:
+// <p class="no-select">This is a regular paragraph</p>
+//
+//
+// Styleguide zMisc.noselect
+.no-select {
+    user-select: none;
+    outline: none;
+}
+
+// Appearance
+//
+// <ul>
+// <li>.fade: lowers opacity of an ele</li>
+// <li>.faded: lowers the opacity even more</li>
+// <li>.hover-fade: fade on hover</li>
+// <li>.hover-faded: faded on hover</li>
+// </ul>
+// 
+// Markup:
+// <div class="fade">Fade</div>
+// <div class="faded">Faded</div>
+// <div class="hover-fade">Hover-fade</div>
+// <div class="hover-faded">Hover-faded</div>
+//
+// Styleguide zMisc.appearance
+.fade {
+    opacity: 0.7;
+}
+.faded {
+    opacity: 0.3;
+}
+
+.hover-fade:hover {
+    @extend .fade;
+}
+.hover-faded:hover {
+    @extend .faded;
+}
+.hover-normal {
+    opacity: 1;
+}
+
+// Other
+//
+// .unset: unsets all style
+//
+// Styleguide zMisc.zother
+.unset {
+    all: unset !important;
+}

@@ -1,16 +1,5 @@
 /* =============================================================================
     @author: Kishan Nirghin
-    @date:  22th june 2017
-    @description: gulpfile that covers the basic needs for webdevelopment
-
-    @folders: The expected folder structure of a project looks like this
-        /source
-            /scss
-            /ts
-        /public
-            /css
-            /js
-            /media
 ============================================================================= */
 var gulp  = require("gulp"),
     gutil = require("gulp-util"),
@@ -25,23 +14,23 @@ var browserSync = require("browser-sync").create();
 *    -> Recompiles scss into the corresponding folder
 */
 gulp.task("build-css", function() {
-    return gulp.src("./source/scss/**/*.scss")
+    return gulp.src("./src/scss/**/*.scss")
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(gulp.dest("./public/css"));
+        .pipe(gulp.dest("./dist/css"));
 });
 
 /* Moves over the html files to the right folder */
 gulp.task("build-html", function(){
-    return gulp.src("./source/**/*.html")
-        .pipe(gulp.dest("./public"));
+    return gulp.src("./src/**/*.html")
+        .pipe(gulp.dest("./dist"));
 });
 
 /* Creates a browsersync browser instance */
 gulp.task("browserSync", function() {
     browserSync.init({
         server: {
-            baseDir: "./public"
+            baseDir: "./dist"
         },
         browser: "google chrome"
     });
@@ -53,10 +42,10 @@ gulp.task("browserSync", function() {
 *   - Then sets up watchers for css
 */
 gulp.task("watch", ["browserSync", "build-html", "build-css"], function(){
-    gulp.watch("./source/**/*.html", ["build-html"]);
-    gulp.watch("./public/**/*.html", browserSync.reload);
-    gulp.watch("./source/scss/**/*.scss", ["build-css"]);
-    gulp.watch("./public/css/**/*.css", browserSync.reload);
+    gulp.watch("./src/**/*.html", ["build-html"]);
+    gulp.watch("./dist/**/*.html", browserSync.reload);
+    gulp.watch("./src/scss/**/*.scss", ["build-css"]);
+    gulp.watch("./dist/css/**/*.css", browserSync.reload);
 
     gulp.watch("gulpfile.js").on("change", () => process.exit(0));
 });

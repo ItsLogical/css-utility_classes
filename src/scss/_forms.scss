@@ -1,0 +1,27 @@
+// if the input is being used as a button, skip the padding.
+.input {
+    &:not([type=button]):not([type=submit]):not([type=reset]) {
+        padding: 8px;
+    }
+
+    &[type=button], &[type=submit], &[type=reset]  {
+        @extend .button;
+    }
+}
+
+// makes an input field look like a regular text field
+.contenteditable {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.ul {
+    padding-left: 40px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

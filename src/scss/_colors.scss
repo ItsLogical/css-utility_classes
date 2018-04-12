@@ -1,0 +1,140 @@
+// Background-colors
+//
+// To change the background-colors of elements use these classes
+// <ul>
+// <li>.bg-&lt;color&gt;: changes the background color</li>
+// <li>.bg-lighten: ligthens the entire element 
+//  <span class="note">Also lightens the fonts</span></li>
+// <li>.bg-darken: darkens the element
+//  <span class="note">Also darkens the fonts</span></li>
+// <li>.bg-shaded (only for nested elements): darkens the element
+//  <span class="note">Also darkens the fonts</span></li>
+//  <li>&lt;ANY&gt;--faded: lowers the opacity of the color
+// </ul>
+//
+// Markup:
+// <div class="bg-grad-red p16">Red div</div>
+// <div class="bg-white p16">White div</div>
+// <div class="bg-blue p16">Blue div</div>
+// <div class="bg-blue--faded p16">Blue faded div</div>
+// <div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
+// <div class="bg-purple p16">Purple div<div class="bg-darken p4">Darkend div</div></div>
+// <div class="bg-blue bg-darken p16">Darkened Blue div</div>
+// <div class="bg-blue bg-lighten p16">Lightend Blue div</div>
+//
+//
+// Styleguide Colors.background
+
+// Font-colors
+//
+// Use the color class directly to change the font color
+// <ul>
+//  <li>.&lt;color&gt;</li>
+//  <li>&lt;ANY&gt;--faded: lowers the opacity of the color</li>
+// </ul>
+//
+// Markup:
+// <h1 class="red">Red text</h1>
+// <h1 class="grad-purple">Purple gradient text</h1>
+//
+//
+// Styleguide Colors.font
+
+// Border-colors
+//
+// To add borders in various colours use the following classes:
+// <ul>
+// <li>.underline-&lt;color&gt;: adds a 1px border at the top side of the element</li>
+// <li>.upperline-&lt;color&gt;: adds a 1px border at the bottom of the element</li>
+// <li>.border-&lt;color&gt;: adds a border around the element</li>
+//  <li>&lt;ANY&gt;--faded: lowers the opacity of the color
+// </ul>
+//
+// Markup:
+// <h1 class="underline-red">Red underlined text</h1>
+// <h1 class="upperline-purple">Purple underlined text</h1>
+// <h1 class="border-blue">Blue bordered text</h1>
+//
+//
+// Styleguide Colors.border
+$faded_alpha: 0.3;
+
+@each $colorName, $colorValue in $colors {
+    .#{$colorName} {
+        color: $colorValue !important;
+    }
+    .#{$colorName}--faded {
+        color: rgba($colorValue, $faded_alpha) !important;
+    }
+    .bg-#{$colorName} {
+        background-color: $colorValue !important;
+    }
+    .bg-#{$colorName}--faded {
+        background-color: rgba($colorValue, $faded_alpha) !important;
+    }
+    .underline-#{$colorName} {
+        border-bottom: 1px solid rgba($colorValue, 1) !important;
+    }
+    .underline-#{$colorName}--faded {
+        border-bottom: 1px solid rgba($colorValue, $faded_alpha) !important;
+    }
+    .upperline-#{$colorName} {
+        border-top: 1px solid rgba($colorValue, 1) !important;
+    }
+    .upperline-#{$colorName}--faded {
+        border-top: 1px solid rgba($colorValue, $faded_alpha) !important;
+    }
+    .border-#{$colorName} {
+        border: 1px solid $colorValue !important;
+    }
+    .border-#{$colorName}--faded {
+        border: 1px solid rgba($colorValue, $faded_alpha) !important;
+    }
+}
+
+/* other bg-tricks */
+.bg-shaded {
+    background-color: rgba(0,0,0,0.25);
+}
+.bg-darken {
+    position: relative;
+    &:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,0.5);
+    }
+
+    &.darken--light:after {
+        background:rgba(0,0,0,0.25);
+    }
+}
+.bg-lighten {
+    position: relative;
+    &:after {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(255,255,255,0.5);
+    }
+}
+.bg-shadow {
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+@each $colorName, $colorValue in $gradients {
+    .grad-#{$colorName} {
+        background: $colorValue;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .bg-grad-#{$colorName} {
+        background: $colorValue;
+    }
+}

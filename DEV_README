@@ -1,10 +1,74 @@
+## TODO
+ - rename folder structure to bower conventions
+ - improve style of styleguide:
+  * in the lists make the classes differ from the description
+
+## HOW-TO
+ - No BEM HERE. (http://getbem.com/) because they are not modifiers, but rather
+ quick classes.
+ - The use of !important is only allowed for classes that do exactly 1 thing.
+ - Utility classes should not override default styles.
+ - When using irrelevant classes in the markup, place them at the end.
+  (important things first)
+ - It is not intended as a CSS-Framework therefore real styles should be made on
+ top of the utility classes stylesheet.
+
+
+ ### HOW-TO-DEVELOP
+ compile css
+ >> npm run watch 
+ compile styleguide
+ >> npm run watch-kss
+ 
+--------------------------------------------------------------------------------
+### HOW-TO-BOWER
 Every stable version should be published on Bower and NPM
 
-
----- BOWER ----
-REGISTER PACKAGE
+#### REGISTER PACKAGE
 bower register itl-css-utility_classes git://github.com/ItsLogical/css-utility_classes.git
 
-ADD NEW SEMVER TAG
+#### ADD NEW SEMVER TAG
+git tag -a v1.0.1 
+git tag -a v1.0.0 -m "Initial release"
 
----- ----- ----
+--------------------------------------------------------------------------------
+### HOW-TO-STYLEGUIDE
+The styleguide should be kept up-to-date with all implemented classes
+
+#### IN SCSS FILES
+add comments in the following style for it to appear in the styleguide
+// <Title>
+//
+// <Subtitle/Text>
+//
+// Markup:
+// <Actual code example>
+//
+// Styleguide <Section.subsection>
+
+#### UPDATE STYLEGUIDE
+npm run build-kss
+
+--------------------------------------------------------------------------------
+
+### Assumptions / Proposals / Considerations
+ - Should BEM modifiers extend the base class? e.g. should button--xs extend button?
+ REJECTED.
+    Would make CSS cleaner, does put more weight on those "quick" modification classes.
+    Does make the system more hairy and complex, as it increases dependencies.
+    
+
+ - Should we override the base tags to make them more Logical?
+ REJECTED
+    Nah, as that would defeat the purpose of this stylesheet which focusses on 
+    utility_classes only. It should be able to be imported to any project without
+    fear of breaking things.
+    
+
+ - Should we do synonyms that might make more sense in some situations?
+ ACCEPTED
+    It is always good to have a standard way of doing things. Then again, this
+    should be used to be intuitive. Therefore it might make sense to sometimes 
+    add synonyms to classes. And find a balance with learning this CSS "framework"
+    and it being intuitive.
+    

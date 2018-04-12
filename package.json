@@ -1,17 +1,19 @@
 {
   "name": "itl-css-utility_classes",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "ITL css-utility_classes",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build", 
+    "watch": "gulp watch",
     "dev": "gulp watch",
-    "watch": "onchange './source/scss/**/*.scss' -- npm run kss",
-    "kss": "kss --source ./source/scss/ --destination ./public/styleguide --css ../css/itl-utility_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL utility_classes' --homepage ../../README.md"
+    "watch-kss": "onchange './src/scss/**/*.scss' -- npm run build-kss",
+    "build-kss": "kss --source ./src/scss/ --destination ./dist/styleguide --css ../css/itl-utility_classes.css --builder node_modules/michelangelo/kss_styleguide/custom-template/ --title 'ITL utility_classes' --homepage ../../README.md"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kishanjay/css-attribute_classes.git"
+    "url": "git+https://github.com/ItsLogical/css-utility_classes.git"
   },
   "keywords": [
     "ITL",
@@ -22,9 +24,9 @@
   "author": "Kishan Nirghin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kishanjay/css-attribute_classes/issues"
+    "url": "https://github.com/ItsLogical/css-utility_classes/issues"
   },
-  "homepage": "https://github.com/Kishanjay/css-attribute_classes#readme",
+  "homepage": "https://github.com/ItsLogical/css-utility_classes#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",

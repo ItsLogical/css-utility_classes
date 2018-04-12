@@ -1,0 +1,29 @@
+// Lists
+//
+// Lists as they should be
+// <ul>
+// <li>.list: list</li>
+// <li>.list__title: title of a list</li>
+// </ul>
+//
+// Markup:
+// <ul>
+//  <li>1</li>
+//  <li>2</li>
+// </ul>
+// <ul class="list">
+//  <li class="list__title">1</li>
+//  <li>2</li>
+// </ul>
+// 
+// Styleguide Lists
+.list {
+    list-style-type: none;
+}
+
+.list__title {
+    @extend .tb1;
+    font-weight: bold;
+
+    padding: 16px 16px 16px 0px;
+}

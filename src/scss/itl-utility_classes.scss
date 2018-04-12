@@ -1,0 +1,51 @@
+@import "_variables";
+
+@import "_buttons";
+@import "_forms";
+@import "_tables";
+@import "_lists";
+
+@import "_fonts";
+@import "_responsiveness";
+@import "_layout";
+@import "_sizes";
+@import "_misc";
+
+@import "_colors";
+
+
+// in strong mode (which should be the default, but I understand that it can be 
+//  unwanted having a stylesheet doing things you do not know about)
+// maybe introduce a new tag and nest all of these things inside that.
+// I feel like this goes in against the utilityclasses principle.
+//  attempt: add a class and nest these things inside -> did not work because it would bind to strong.
+
+// in strong mode (which should be normal)
+// @override the default font sizes;
+// @override the default font-families;
+// @add border-box to all elements;
+// @include the custom styles to default;
+  // html, body {
+  //   @extend .text;
+  //   margin: 0px;
+  //   padding: 0px;
+  // }
+  // h1, h2, h3, h4, h5, h6 {
+  //   @extend .title;
+  // }
+  // h1 { @extend .th1; }
+  // h2 { @extend .th2; }
+  // h3 { @extend .th3; }
+  // h4 { @extend .th4; }
+  // h5 { @extend .th5; }
+  // h6 { @extend .th6; }
+
+  // ul { @extend .list; }
+  // a { @extend .link; }
+  // button { @extend .button; @extend .no-select; }
+  // input { @extend .input; }
+  // table { @extend .table; }
+  // * {
+  //   box-sizing: border-box;
+  // } 
+
