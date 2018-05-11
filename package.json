@@ -1,11 +1,11 @@
 {
   "name": "itl-css-utility_classes",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "ITL css-utility_classes",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build", 
+    "build": "gulp build",
     "watch": "gulp watch",
     "dev": "gulp watch",
     "watch-kss": "onchange './src/scss/**/*.scss' -- npm run build-kss",
