@@ -298,85 +298,85 @@
 
 .hide-xs,
 .hide-xs-only {
-  display: none; }
+  display: none !important; }
   @media (min-width: 48em) {
     .hide-xs,
     .hide-xs-only {
-      display: inherit; } }
+      display: inherit !important; } }
 
 .hide-sm {
-  display: none; }
+  display: none !important; }
   @media (min-width: 64em) {
     .hide-sm {
-      display: inherit; } }
+      display: inherit !important; } }
 
 .hide-md {
-  display: none; }
+  display: none !important; }
   @media (min-width: 75em) {
     .hide-md {
-      display: inherit; } }
+      display: inherit !important; } }
 
 @media (min-width: 48em) {
   .hide-sm-only {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 64em) {
   .hide-sm-only {
-    display: inherit; } }
+    display: inherit !important; } }
 
 @media (min-width: 64em) {
   .hide-md-only {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 75em) {
   .hide-md-only {
-    display: inherit; } }
+    display: inherit !important; } }
 
 .hide-lg-only {
-  display: block; }
+  display: block !important; }
   @media (min-width: 75em) {
     .hide-lg-only {
-      display: none; } }
+      display: none !important; } }
 
 @media (min-width: 48em) {
   .show-xs {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 64em) {
   .show-sm {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 75em) {
   .show-md {
-    display: none; } }
+    display: none !important; } }
 
 @media (min-width: 48em) {
   .show-xs-only {
-    display: none; } }
+    display: none !important; } }
 
 .show-sm-only {
-  display: none; }
+  display: none !important; }
   @media (min-width: 48em) {
     .show-sm-only {
-      display: inherit; } }
+      display: inherit !important; } }
   @media (min-width: 64em) {
     .show-sm-only {
-      display: none; } }
+      display: none !important; } }
 
 .show-md-only {
-  display: none; }
+  display: none !important; }
   @media (min-width: 64em) {
     .show-md-only {
-      display: inherit; } }
+      display: inherit !important; } }
   @media (min-width: 75em) {
     .show-md-only {
-      display: none; } }
+      display: none !important; } }
 
 .show-lg-only {
-  display: none; }
+  display: none !important; }
   @media (min-width: 75em) {
     .show-lg-only {
-      display: inherit; } }
+      display: inherit !important; } }
 
 .inline {
   display: inline !important; }
@@ -1072,10 +1072,12 @@
 
 .link {
   display: inline-block;
-  border-bottom: 1px solid transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-text-decoration: underline solid transparent;
+          text-decoration: underline solid transparent; }
   .link:hover {
-    border-bottom: 1px solid #3498db; }
+    -webkit-text-decoration: underline solid #3498db;
+            text-decoration: underline solid #3498db; }
 
 .not-allowed {
   cursor: not-allowed; }

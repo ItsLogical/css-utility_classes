@@ -21,10 +21,11 @@
 }
 .link {
     display: inline-block;
-    border-bottom: 1px solid transparent;
     cursor: pointer;
+
+    text-decoration: underline solid transparent;
     &:hover {
-        border-bottom: 1px solid color(blue);
+        text-decoration: underline solid color(blue);
     }
 }
 
