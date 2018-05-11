@@ -108,7 +108,7 @@
         display: none !important;
     }
     @include breakpoint(sm) {
-        display: inherit !important;
+        display: inherit;
     }
 }
 
@@ -117,7 +117,7 @@
         display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit !important;
+        display: inherit;
     }
 }
 

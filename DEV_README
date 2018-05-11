@@ -32,6 +32,13 @@ bower register itl-css-utility_classes git://github.com/ItsLogical/css-utility_c
 git tag -a v1.0.1 
 git tag -a v1.0.0 -m "Initial release"
 git push --tags
+
+
+### HOW-TO-NPM
+add new semver tag. 
+(> npm version x.x.x) <= not sure if this line is needed after adding new semver tag
+> npm publish
+
 --------------------------------------------------------------------------------
 ### HOW-TO-STYLEGUIDE
 The styleguide should be kept up-to-date with all implemented classes
