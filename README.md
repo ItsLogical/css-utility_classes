@@ -51,9 +51,10 @@ Do this:
 
 
 ### Changelog
-| version | description     | note(s)                                                          |
-|---------|-----------------|------------------------------------------------------------------|
-| v1.0.0  | initial release | very basic utility classes                                       |
-| v2.0.0  | refactoring     | breaks previous dependencies as the folder structure has changed |
+| version | description      | note(s)                                                          |
+|---------|------------------|------------------------------------------------------------------|
+| v1.0.0  | initial release  | very basic utility classes                                       |
+| v2.0.0  | refactoring      | breaks previous dependencies as the folder structure has changed |
+| v2.0.1  | binding strength | added important to the responsiveness visibility classes         |
 
 DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.

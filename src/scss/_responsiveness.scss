@@ -105,111 +105,111 @@
 .hide-xs,
 .hide-xs-only {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(sm) {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 .hide-sm {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 .hide-md {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 .hide-sm-only {
     @include breakpoint(sm) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 .hide-md-only {
     @include breakpoint(md) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 .hide-lg-only {
     @include breakpoint(xs) {
-        display: block;
+        display: block !important;
     }
     @include breakpoint(lg) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-xs {
     @include breakpoint(sm) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-sm {
     @include breakpoint(md) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-md {
     @include breakpoint(lg) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-xs-only {
     @include breakpoint(sm) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-sm-only {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(sm) {
-        display: inherit;
+        display: inherit !important;
     }
     @include breakpoint(md) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-md-only {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit;
+        display: inherit !important;
     }
     @include breakpoint(lg) {
-        display: none;
+        display: none !important;
     }
 }
 
 .show-lg-only {
     @include breakpoint(xs) {
-        display: none;
+        display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit;
+        display: inherit !important;
     }
 }
