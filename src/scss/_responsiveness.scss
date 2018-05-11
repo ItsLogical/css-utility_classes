@@ -126,7 +126,7 @@
         display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit !important;
+        display: inherit;
     }
 }
 
@@ -135,7 +135,7 @@
         display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit !important;
+        display: inherit;
     }
 }
 
@@ -144,13 +144,13 @@
         display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit !important;
+        display: inherit;
     }
 }
 
 .hide-lg-only {
     @include breakpoint(xs) {
-        display: block !important;
+        display: inherit;
     }
     @include breakpoint(lg) {
         display: none !important;
@@ -186,7 +186,7 @@
         display: none !important;
     }
     @include breakpoint(sm) {
-        display: inherit !important;
+        display: inherit;
     }
     @include breakpoint(md) {
         display: none !important;
@@ -198,7 +198,7 @@
         display: none !important;
     }
     @include breakpoint(md) {
-        display: inherit !important;
+        display: inherit;
     }
     @include breakpoint(lg) {
         display: none !important;
@@ -210,6 +210,6 @@
         display: none !important;
     }
     @include breakpoint(lg) {
-        display: inherit !important;
+        display: inherit;
     }
 }

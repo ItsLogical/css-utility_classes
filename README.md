@@ -57,5 +57,6 @@ Do this:
 | v2.0.0  | refactoring        | breaks previous dependencies as the folder structure has changed |
 | v2.0.1  | binding strength   | added important to the responsiveness visibility classes         |
 | v2.0.2  | link-underline fix | the underline should be done with text-decoration not borders    |
+| v2.0.3  | specificity fix    | specificity for responsiveness visibility improved               |
 
 DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.
