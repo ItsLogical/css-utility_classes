@@ -28,6 +28,7 @@ Every stable version should be published on Bower and NPM
 bower register itl-css-utility_classes git://github.com/ItsLogical/css-utility_classes.git
 
 #### ADD NEW SEMVER TAG
+(commit changes first)
 git tag -a v1.0.1 
 git tag -a v1.0.0 -m "Initial release"
 git push --tags
@@ -48,6 +49,8 @@ add comments in the following style for it to appear in the styleguide
 
 #### UPDATE STYLEGUIDE
 npm run build-kss
+
+#### VIEW STYLEGUIDE
 
 --------------------------------------------------------------------------------
 
