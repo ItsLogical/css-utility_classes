@@ -104,112 +104,85 @@
 // Styleguide Responsiveness.visibilty
 .hide-xs,
 .hide-xs-only {
-    @include breakpoint(xs) {
+    @media (max-width: 47.999em) {
         display: none !important;
-    }
-    @include breakpoint(sm) {
-        display: inherit;
     }
 }
 
 .hide-sm {
-    @include breakpoint(xs) {
+    @media (max-width: 63.999em) {
         display: none !important;
-    }
-    @include breakpoint(md) {
-        display: inherit;
     }
 }
 
 .hide-md {
-    @include breakpoint(xs) {
+    @media (max-width: 74.999em) {
         display: none !important;
-    }
-    @include breakpoint(lg) {
-        display: inherit;
     }
 }
 
 .hide-sm-only {
-    @include breakpoint(sm) {
+    @media (min-width: 48em) and (max-width: 63.999em) {
         display: none !important;
-    }
-    @include breakpoint(md) {
-        display: inherit;
     }
 }
 
 .hide-md-only {
-    @include breakpoint(md) {
+    @media (min-width: 64em) and (max-width: 74.999em) {
         display: none !important;
-    }
-    @include breakpoint(lg) {
-        display: inherit;
     }
 }
 
 .hide-lg-only {
-    @include breakpoint(xs) {
-        display: inherit;
-    }
-    @include breakpoint(lg) {
+    @media (min-width: 75em) {
         display: none !important;
     }
 }
 
 .show-xs {
-    @include breakpoint(sm) {
+    @media (min-width: 48em) {
         display: none !important;
     }
 }
 
 .show-sm {
-    @include breakpoint(md) {
+    @media (min-width: 64em) {
         display: none !important;
     }
 }
 
 .show-md {
-    @include breakpoint(lg) {
+    @media (min-width: 75em) {
         display: none !important;
     }
 }
 
 .show-xs-only {
-    @include breakpoint(sm) {
+    @media (min-width: 48em) {
         display: none !important;
     }
 }
 
 .show-sm-only {
-    @include breakpoint(xs) {
+    @media (max-width: 47.999em) {
         display: none !important;
     }
-    @include breakpoint(sm) {
-        display: inherit;
-    }
-    @include breakpoint(md) {
+    @media (min-width: 64em) {
         display: none !important;
     }
 }
 
 .show-md-only {
-    @include breakpoint(xs) {
+    @media (max-width: 63.999em) {
         display: none !important;
     }
-    @include breakpoint(md) {
-        display: inherit;
-    }
-    @include breakpoint(lg) {
+    @media (min-width: 75em) {
         display: none !important;
     }
 }
 
 .show-lg-only {
-    @include breakpoint(xs) {
+    @media (max-width: 74.999em) {
         display: none !important;
-    }
-    @include breakpoint(lg) {
-        display: inherit;
     }
 }
