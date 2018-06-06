@@ -51,13 +51,14 @@ Do this:
 
 
 ### Changelog
-| version | description         | note(s)                                                          |
-|---------|---------------------|------------------------------------------------------------------|
-| v1.0.0  | initial release     | very basic utility classes                                       |
-| v2.0.0  | refactoring         | breaks previous dependencies as the folder structure has changed |
-| v2.0.1  | binding strength    | added important to the responsiveness visibility classes         |
-| v2.0.2  | link-underline fix  | the underline should be done with text-decoration not borders    |
-| v2.0.3  | specificity fix     | specificity for responsiveness visibility improved               |
-| v2.1.0  | specificity changed | specificity for responsiveness visibility changed / renewed      |
+| version | description          | note(s)                                                          |
+|---------|----------------------|------------------------------------------------------------------|
+| v1.0.0  | initial release      | very basic utility classes                                       |
+| v2.0.0  | refactoring          | breaks previous dependencies as the folder structure has changed |
+| v2.0.1  | binding strength     | added important to the responsiveness visibility classes         |
+| v2.0.2  | link-underline fix   | the underline should be done with text-decoration not borders    |
+| v2.0.3  | specificity fix      | specificity for responsiveness visibility improved               |
+| v2.1.0  | specificity changed  | specificity for responsiveness visibility changed / renewed      |
+| v2.1.1  | added reset optional | itl-css_reset: overrides/improves default browser behaviour      |
 
 DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.
