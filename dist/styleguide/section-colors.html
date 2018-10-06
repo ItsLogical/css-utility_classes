@@ -57,20 +57,26 @@
                       </a>
                     </li>
                     <li class="kss-nav__item ">
-                      <a href="section-colors.html#kssref-colors-background">
+                      <a href="section-colors.html#kssref-colors-backgroundcolor">
                         <span class="kss-nav__ref">2.2</span>
                         <span class="kss-nav__name">Background-colors</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
-                      <a href="section-colors.html#kssref-colors-border">
+                      <a href="section-colors.html#kssref-colors-backgroundstyle">
                         <span class="kss-nav__ref">2.3</span>
+                        <span class="kss-nav__name">Background-style</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-colors.html#kssref-colors-border">
+                        <span class="kss-nav__ref">2.4</span>
                         <span class="kss-nav__name">Border-colors</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
                       <a href="section-colors.html#kssref-colors-font">
-                        <span class="kss-nav__ref">2.4</span>
+                        <span class="kss-nav__ref">2.5</span>
                         <span class="kss-nav__name">Font-colors</span>
                       </a>
                     </li>
@@ -134,7 +140,7 @@
             <header class="kss-section kss-section--depth-1" id="kssref-colors">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_variables.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>_variables.scss</span>, line <span>15</span></p>
 
               <a class="kss-section__permalink" href="#kssref-colors">
                 <h1 class="kss-section__item kss-section__item--depth-1">
@@ -240,7 +246,7 @@
             <section class="kss-section kss-section--depth-2" id="kssref-colors-agradients">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_variables.scss</span>, line <span>48</span></p>
+                <p class="kss-section__source">Source: <span>_variables.scss</span>, line <span>62</span></p>
 
               <a class="kss-section__permalink" href="#kssref-colors-agradients">
                 <h2 class="kss-section__item kss-section__item--depth-2">
@@ -267,27 +273,22 @@
 
 
             </section>
-            <section class="kss-section kss-section--depth-2" id="kssref-colors-background">
+            <section class="kss-section kss-section--depth-2" id="kssref-colors-backgroundcolor">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>1</span></p>
+                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>3</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-colors-background">
+              <a class="kss-section__permalink" href="#kssref-colors-backgroundcolor">
                 <h2 class="kss-section__item kss-section__item--depth-2">
                   <span class="kss-section__ref">2.2</span>
                   <span class="kss-section__name">Background-colors</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>To change the background-colors of elements use these classes</p>
+                <div class="kss-section__description"><p><code class="block">@mixin bgColor($color)</code>
+To change the background-colors of elements use these classes</p>
 <ul>
 <li>.bg-&lt;color&gt;: changes the background color</li>
-<li>.bg-lighten: ligthens the entire element
- <span class="note">Also lightens the fonts</span></li>
-<li>.bg-darken: darkens the element
- <span class="note">Also darkens the fonts</span></li>
-<li>.bg-shaded (only for nested elements): darkens the element
- <span class="note">Also darkens the fonts</span></li>
  <li>&lt;ANY&gt;--faded: lowers the opacity of the color
 </ul></div>
 
@@ -300,11 +301,7 @@
                 <div class="kss-modifiers__example"><div class="bg-grad-red p16">Red div</div>
 <div class="bg-white p16">White div</div>
 <div class="bg-blue p16">Blue div</div>
-<div class="bg-blue--faded p16">Blue faded div</div>
-<div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
-<div class="bg-purple p16">Purple div<div class="bg-darken p4">Darkend div</div></div>
-<div class="bg-blue bg-darken p16">Darkened Blue div</div>
-<div class="bg-blue bg-lighten p16">Lightend Blue div</div></div>
+<div class="bg-blue--faded p16">Blue faded div</div></div>
 
               </article>
 
@@ -312,8 +309,49 @@
                   <pre><code class="language-markup">&lt;div class&#x3D;&quot;bg-grad-red p16&quot;&gt;Red div&lt;/div&gt;
 &lt;div class&#x3D;&quot;bg-white p16&quot;&gt;White div&lt;/div&gt;
 &lt;div class&#x3D;&quot;bg-blue p16&quot;&gt;Blue div&lt;/div&gt;
-&lt;div class&#x3D;&quot;bg-blue--faded p16&quot;&gt;Blue faded div&lt;/div&gt;
-&lt;div class&#x3D;&quot;bg-purple p16&quot;&gt;Purple div&lt;div class&#x3D;&quot;bg-shaded p4&quot;&gt;Shaded div&lt;/div&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;bg-blue--faded p16&quot;&gt;Blue faded div&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-colors-backgroundstyle">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>41</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-colors-backgroundstyle">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.3</span>
+                  <span class="kss-section__name">Background-style</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p><code class="block">@mixin bgStyle([shaded, darken, lighten, shadow])</code>
+To change the background-colors of elements use these classes</p>
+<ul>
+<li>.bg-lighten: ligthens the entire element
+ <span class="note">Also lightens the fonts</span></li>
+<li>.bg-darken: darkens the entire element
+ <span class="note">Also darkens the fonts</span></li>
+<li>.bg-shaded (only for nested elements): darkens the element
+ <span class="note">Also darkens the fonts</span></li>
+ <li>&lt;ANY&gt;--faded: lowers the opacity of the color
+</ul></div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
+<div class="bg-purple p16">Purple div<div class="bg-darken p4">Darkend div</div></div>
+<div class="bg-blue bg-darken p16">Darkened Blue div</div>
+<div class="bg-blue bg-lighten p16">Lightend Blue div</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;bg-purple p16&quot;&gt;Purple div&lt;div class&#x3D;&quot;bg-shaded p4&quot;&gt;Shaded div&lt;/div&gt;&lt;/div&gt;
 &lt;div class&#x3D;&quot;bg-purple p16&quot;&gt;Purple div&lt;div class&#x3D;&quot;bg-darken p4&quot;&gt;Darkend div&lt;/div&gt;&lt;/div&gt;
 &lt;div class&#x3D;&quot;bg-blue bg-darken p16&quot;&gt;Darkened Blue div&lt;/div&gt;
 &lt;div class&#x3D;&quot;bg-blue bg-lighten p16&quot;&gt;Lightend Blue div&lt;/div&gt;</code></pre>
@@ -323,16 +361,17 @@
             <section class="kss-section kss-section--depth-2" id="kssref-colors-border">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>43</span></p>
+                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>148</span></p>
 
               <a class="kss-section__permalink" href="#kssref-colors-border">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.3</span>
+                  <span class="kss-section__ref">2.4</span>
                   <span class="kss-section__name">Border-colors</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>To add borders in various colours use the following classes:</p>
+                <div class="kss-section__description"><p><code class="block">@mixin border($color)</code>
+To add borders in various colours use the following classes:</p>
 <ul>
 <li>.underline-&lt;color&gt;: adds a 1px border at the top side of the element</li>
 <li>.upperline-&lt;color&gt;: adds a 1px border at the bottom of the element</li>
@@ -362,19 +401,21 @@
             <section class="kss-section kss-section--depth-2" id="kssref-colors-font">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>28</span></p>
+                <p class="kss-section__source">Source: <span>_colors.scss</span>, line <span>112</span></p>
 
               <a class="kss-section__permalink" href="#kssref-colors-font">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.4</span>
+                  <span class="kss-section__ref">2.5</span>
                   <span class="kss-section__name">Font-colors</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Use the color class directly to change the font color</p>
+                <div class="kss-section__description"><p><code class="block">@mixin color($color)</code>
+Use the color class directly to change the font color</p>
 <ul>
- <li>.&lt;color&gt;</li>
- <li>&lt;ANY&gt;--faded: lowers the opacity of the color</li>
+ <li>.&lt;color&gt;: font color</li>
+ <li>.&lt;color&gt;--faded: lowers the opacity of the color</li>
+ <li>.grad-&lt;color&gt;: gradient font color</li>
 </ul></div>
 
             </article>
@@ -384,12 +425,14 @@
 
 
                 <div class="kss-modifiers__example"><h1 class="red">Red text</h1>
+<h1 class="red--faded">faded blue text</h1>
 <h1 class="grad-purple">Purple gradient text</h1></div>
 
               </article>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;h1 class&#x3D;&quot;red&quot;&gt;Red text&lt;/h1&gt;
+&lt;h1 class&#x3D;&quot;red--faded&quot;&gt;faded blue text&lt;/h1&gt;
 &lt;h1 class&#x3D;&quot;grad-purple&quot;&gt;Purple gradient text&lt;/h1&gt;</code></pre>
                 </article>
 

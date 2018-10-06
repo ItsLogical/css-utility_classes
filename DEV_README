@@ -47,6 +47,7 @@ The styleguide should be kept up-to-date with all implemented classes
 add comments in the following style for it to appear in the styleguide
 // <Title>
 //
+// <Mixin (optional)>
 // <Subtitle/Text>
 //
 // Markup:
@@ -73,6 +74,10 @@ npm run build-kss
     Nah, as that would defeat the purpose of this stylesheet which focusses on 
     utility_classes only. It should be able to be imported to any project without
     fear of breaking things.
+ ACCEPTED
+    On second thought.. might be cool to have this as an opt-in. Therefore itl-css_reset
+    was created. Which implements a normalizer and overrides the base tags with
+    utility classes. E.g. <button> becomes a utility button
     
 
  - Should we do synonyms that might make more sense in some situations?
@@ -81,4 +86,8 @@ npm run build-kss
     should be used to be intuitive. Therefore it might make sense to sometimes 
     add synonyms to classes. And find a balance with learning this CSS "framework"
     and it being intuitive.
+ REJECTED
+    On second thought, after a good usage period all the names should be known
+    to the user. Lets not over complicate things by adding the same functionality
+    under different names.
     

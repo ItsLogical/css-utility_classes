@@ -137,7 +137,8 @@
                 </h1>
               </a>
 
-                <div class="kss-section__description"><p>Improvement uppon the default buttons. Buttons as they should be.</p>
+                <div class="kss-section__description"><p><code class="block">@mixin button</code>
+Improvement uppon the default buttons. Buttons as they should be.</p>
 </div>
 
             </article>
@@ -146,19 +147,19 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button>Normal button</button><button class="button border-black">Utility button</button></div>
+                <div class="kss-modifiers__example"><button>Normal button</button><button class="button">Utility button</button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button&gt;Normal button&lt;/button&gt;&lt;button class&#x3D;&quot;button border-black&quot;&gt;Utility button&lt;/button&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;button&gt;Normal button&lt;/button&gt;&lt;button class&#x3D;&quot;button&quot;&gt;Utility button&lt;/button&gt;</code></pre>
                 </article>
 
             </header>
             <section class="kss-section kss-section--depth-2" id="kssref-button-effects">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>107</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>149</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button-effects">
                 <h2 class="kss-section__item kss-section__item--depth-2">
@@ -167,11 +168,12 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Add hover-effects to buttons</p>
+                <div class="kss-section__description"><p><code class="block">@mixin buttonEffect([lighten, darken, 3d])</code>
+Add hover-effects to buttons</p>
 <ul>
-<li>.button--fade: fades the button opacity <span class="note">(.button--lighten)</span></li>
-<li>.button--darken: darkens the button bg <span class="note">(can also be used with darken--light)</span></li>
-<li>.button--press: gives a 3d effect to a button <span class="note">(.button--3d)</span></li>
+<li>.button--lighten: lightens the button opacity</li>
+<li>.button--darken: darkens the button bg</li>
+<li>.button--3d: gives a 3d effect to a button</li>
 </ul></div>
 
             </article>
@@ -180,25 +182,23 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><button class="button--fade button bg-green">Sample button</button>
+                <div class="kss-modifiers__example"><button class="button--lighten button bg-green">Sample button</button>
 <button class="button--darken button bg-green">Sample button</button>
-<button class="button--darken darken--light button bg-green">Sample button</button>
-<button class="button--press button bg-green">Sample button</button></div>
+<button class="button--3d button bg-green">Sample button</button></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button--fade button bg-green&quot;&gt;Sample button&lt;/button&gt;
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;button--lighten button bg-green&quot;&gt;Sample button&lt;/button&gt;
 &lt;button class&#x3D;&quot;button--darken button bg-green&quot;&gt;Sample button&lt;/button&gt;
-&lt;button class&#x3D;&quot;button--darken darken--light button bg-green&quot;&gt;Sample button&lt;/button&gt;
-&lt;button class&#x3D;&quot;button--press button bg-green&quot;&gt;Sample button&lt;/button&gt;</code></pre>
+&lt;button class&#x3D;&quot;button--3d button bg-green&quot;&gt;Sample button&lt;/button&gt;</code></pre>
                 </article>
 
             </section>
             <section class="kss-section kss-section--depth-2" id="kssref-button-sizes">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>15</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>16</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button-sizes">
                 <h2 class="kss-section__item kss-section__item--depth-2">
@@ -207,7 +207,8 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>use the BEM modifiers to change the default button sizes:</p>
+                <div class="kss-section__description"><p><code class="block">@mixin buttonSize([xs,sm,md,lg,xl,wide,wider])</code>
+use the BEM modifiers to change the default button sizes:</p>
 <ul>
 <li>.button--xs: smallest button in the book</li>
 <li>.button--sm: still smaller than default</li>
@@ -244,7 +245,7 @@
             <section class="kss-section kss-section--depth-2" id="kssref-button-styles">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>74</span></p>
+                <p class="kss-section__source">Source: <span>_buttons.scss</span>, line <span>101</span></p>
 
               <a class="kss-section__permalink" href="#kssref-button-styles">
                 <h2 class="kss-section__item kss-section__item--depth-2">
@@ -253,7 +254,8 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Add appearance styles to buttons</p>
+                <div class="kss-section__description"><p><code class="block">@mixin buttonStyle([flat, curve, pill, round])</code>
+Add appearance styles to buttons</p>
 <ul>
 <li>.button--flat: removes the border-radius</li>
 <li>.button--curve: adds a border-radius</li>

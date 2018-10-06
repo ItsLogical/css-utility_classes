@@ -117,7 +117,9 @@
                 </h1>
               </a>
 
-                <div class="kss-section__description"><p>Lists as they should be</p>
+                <div class="kss-section__description"><p><code class="block">@mixin ul -- resets list to default</code>
+<code class="block">@mixin list -- list without list-style</code>
+Lists as they should be</p>
 <ul>
 <li>.list: list</li>
 <li>.list__title: title of a list</li>
@@ -129,24 +131,24 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><ul>
- <li>1</li>
+                <div class="kss-modifiers__example"><ul class="list">
+ <li class="list__title">1</li>
  <li>2</li>
 </ul>
-<ul class="list">
- <li class="list__title">1</li>
+<ul class="ul">
+ <li>1</li>
  <li>2</li>
 </ul></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;ul&gt;
- &lt;li&gt;1&lt;/li&gt;
+                  <pre><code class="language-markup">&lt;ul class&#x3D;&quot;list&quot;&gt;
+ &lt;li class&#x3D;&quot;list__title&quot;&gt;1&lt;/li&gt;
  &lt;li&gt;2&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul class&#x3D;&quot;list&quot;&gt;
- &lt;li class&#x3D;&quot;list__title&quot;&gt;1&lt;/li&gt;
+&lt;ul class&#x3D;&quot;ul&quot;&gt;
+ &lt;li&gt;1&lt;/li&gt;
  &lt;li&gt;2&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                 </article>

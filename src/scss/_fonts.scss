@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Raleway:100,300,400');
-
-
 // Font families
 //
+// <code class="block">@mixin text <br/>@mixin title</code>
 // <ul>
-// <li>.title: sets a Montserrat font</li>
-// <li>.text: sets a Raleway font</li>
+// <li>.title: sets a title font (default: Montserrat)</li>
+// <li>.text: sets a text font (default: Raleway)</li>
 // </ul>
 //
 // Markup:
@@ -15,15 +13,22 @@
 // <p class="text">This is an example of a prettier paragraph</p>
 //
 // Styleguide Fonts.afamilies
+@mixin title() {
+  font-family: $titleFontFamily, Arial, Helvetica, sans-serif;
+}
 .title {
-  font-family: "Montserrat";
+  @include title();
+}
+@mixin text() {
+  font-family: $textFontFamily, Arial, Helvetica, sans-serif;
 }
 .text {
-  font-family: "Raleway";
+  @include text();
 }
 
 // Relative fontsizes
 //
+// <code class="block">@mixin th(th)<br/>@mixin tb(bigger)<br/>@mixin ts(smaller)</code>
 // Use these classes to quicky change the fontsize <br/>
 // <ul>
 //  <li>.tb5, .th0 - largest font</li>
@@ -46,36 +51,44 @@
 // Styleguide Fonts.size
 
 // Source: http://type-scale.com/
-.tb5, .th0 { // is bigger than h1, therefore th0
-  font-size: 3.998em !important;
+
+/* ============================================================================
+  Really complex way of creating functions and mixins for the fontSizes
+    th(x), tb(x), ts(x) -> functions that return the fontsizes
+    textHeader
+    textBigger
+    textSmaller
+============================================================================ */
+@mixin th($key){
+  font-size: th($key) !important;
 }
-.tb4, .th1 {
-  font-size: 2.827em !important;
+@each $th_key in $th_keys {
+  .th#{$th_key} {
+    @include th($th_key);
+  }
 }
-.tb3, .th2 {
-  font-size: 1.999em !important;
+
+@mixin tb($key){
+  font-size: tb($key) !important;
 }
-.tb2, .th3 {
-  font-size: 1.414em !important;
+@each $tb_key in $tb_keys {
+  .tb#{$tb_key} {
+    @include tb($tb_key);
+  }
 }
-.tb1, .th4 {
-  font-size: 1.2em !important;
+
+@mixin ts($key){
+  font-size: ts($key) !important;
 }
-.tb0, .ts0, .th5 {
-  font-size: 1em !important;
-}
-.ts1, .th6 {
-  font-size: 0.707em !important;
-}
-.ts2 {
-  font-size: 0.5em !important;
-}
-.ts3 {
-  font-size: 0.354em !important;
+@each $ts_key in $ts_keys {
+  .ts#{$ts_key} {
+    @include ts($ts_key);
+  }
 }
 
 // Quick fontsizes
 //
+// <code class="block">@mixin smaller<br/>@mixin bigger</code>
 // <ul>
 // <li>.smaller: makes the font slightly smaller</li>
 // <li>.bigger: makes the font slightly bigger</li>
@@ -86,11 +99,17 @@
 // <p>Text that holds <span class="bigger">some bigger text</span> inside of it</p>
 //
 // Styleguide Fonts.sizequick
+@mixin smaller() {
+  @include ts(1);
+}
 .smaller {
-  @extend .ts1;
+  @include smaller();
+}
+@mixin bigger() {
+  @include tb(1);
 }
 .bigger {
-  @extend .tb1; 
+  @include bigger();
 }
 
 // Font effects
@@ -129,88 +148,10 @@
 .lowercase {
   text-transform: lowercase !important;
 }
-.note {
-  @extend .smaller;
+@mixin note() {
+  @include smaller();
   font-style: italic;
 }
-
-
-// // NOTE: browsers user agent stylesheets are not the same.
-// // these styles are based on Chrome's User Agent Stylesheet
-
-// // NOTE: Chrome's User Agent Stylesheet shows differences in heading styles
-// // depending on its parent element. E.g. headings in nav and main are different.
-
-// // Chrome fonts
-// //
-// // Chrome UserAgents (default stylesheets) fonts
-// // <ul>
-// // <li>.h1: adapts the style of the h1 element of chrome</li>
-// // <li>.h3: adapts the style of the h3 element of chrome</li>
-// // <li>.h5: adapts the style of the h5 element of chrome</li>
-// // </ul>
-// // <ul>
-// // <li>.h1-size: takes the default size of the h1 element of chrome</li>
-// // <li>.h2-size: takes the default size of the h2 element of chrome</li>
-// // <li>.h4-size: takes the default size of the h4 element of chrome</li>
-// // </ul>
-// //
-// // Markup:
-// // <main>
-// // <h1>This is a heading</h1>
-// // <span class="h1">This is a span with the same styles</span>
-// // </main>
-// //
-// // Styleguide Fonts.zchromeFonts
-// .h1, .h2, .h3, .h4, .h5 {
-//   display: block;
-//   font-weight: bold;
-// }
-// .h1 {
-//   @extend .h1-size;
-//   margin-top: 0.67em;
-//   margin-bottom: 0.67em;
-// }
-// .h2 {
-//   @extend .h2-size;
-//   margin-top: 0.83em;
-//   margin-bottom: 0.83em;
-// }
-// .h3 {
-//   @extend .h3-size;
-//   margin-top: 1em;
-//   margin-bottom: 1em;
-// }
-// .h4 {
-//   @extend .h4-size;
-//   margin-top: 1.33em;
-//   margin-bottom: 1.33em;
-// }
-// .h5 {
-//   @extend .h5-size;
-//   margin-top: 1.67em;
-//   margin-bottom: 1.67em;
-// }
-// .h6 {
-//   @extend .h6-size;
-//   margin-top: 2.33em;
-//   margin-bottom: 2.33em;
-// }
-// .h1-size {
-//   font-size: 2em;
-// }
-// .h2-size {
-//   font-size: 1.5em;
-// }
-// .h3-size {
-//   font-size: 1.17em;
-// }
-// .h4-size {
-//   font-size: 1em;
-// }
-// .h5-size {
-//   font-size: 0.83em;
-// }
-// .h6-size {
-//   font-size: 0.67em;
-// }
+.note {
+  @include note();
+}

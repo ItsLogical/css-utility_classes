@@ -1,27 +1,22 @@
 // if the input is being used as a button, skip the padding.
-.input {
-    &:not([type=button]):not([type=submit]):not([type=reset]) {
+@mixin input() {
+    &[type=text], &[type=email], &[type=number] {
         padding: 8px;
     }
-
     &[type=button], &[type=submit], &[type=reset]  {
-        @extend .button;
+        @include button();
     }
+}
+.input {
+    @include input();
 }
 
 // makes an input field look like a regular text field
-.contenteditable {
+@mixin contenteditable(){
     border: none;
     outline: none;
     background-color: transparent;
 }
-
-.list {
-    list-style-type: none;
-}
-
-.ul {
-    padding-left: 40px;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.contenteditable {
+    @include contenteditable();
 }

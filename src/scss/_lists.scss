@@ -1,5 +1,7 @@
 // Lists
 //
+// <code class="block">@mixin ul -- resets list to default</code>
+// <code class="block">@mixin list -- list without list-style</code>
 // Lists as they should be
 // <ul>
 // <li>.list: list</li>
@@ -7,23 +9,37 @@
 // </ul>
 //
 // Markup:
-// <ul>
-//  <li>1</li>
-//  <li>2</li>
-// </ul>
 // <ul class="list">
 //  <li class="list__title">1</li>
 //  <li>2</li>
 // </ul>
+// <ul class="ul">
+//  <li>1</li>
+//  <li>2</li>
+// </ul>
 // 
 // Styleguide Lists
-.list {
+@mixin ul() {
+    list-style-type: default;
+    padding-left: 40px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+@mixin list() {
     list-style-type: none;
 }
-
-.list__title {
-    @extend .tb1;
+@mixin list__title(){
+    @include tb(1);
     font-weight: bold;
 
     padding: 16px 16px 16px 0px;
+}
+.ul {
+    @include ul();
+}
+.list {
+    @include list();
+}
+.list__title {
+    @include list__title();   
 }

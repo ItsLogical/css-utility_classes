@@ -40,6 +40,10 @@
 //
 // Styleguide Sizes.spacings
 
+/* ============================================================================
+    Since these are not intended to be used within (S)CSS files
+    no mixins exist here.
+============================================================================ */
 
 $supported_sizes: (0, 4, 8, 16, 32, 64, 100, 128, 200, 250, 256, 512);
 

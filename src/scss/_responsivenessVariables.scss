@@ -1,0 +1,28 @@
+$minWidthVisibility: (
+    xs: 0em,
+    sm: 48em, // 768px
+    md: 64em, // 1024px
+    lg: 75em, // 1200px
+);
+@function minWidthVisibility($key) {
+    @if map-has-key($minWidthVisibility, $key) {
+        @return map-get($minWidthVisibility, $key);
+    }
+
+    @warn "Unknown `#{$key}` in minWidthVisibility().";
+    @return null;
+}
+$maxWidthVisibility: (
+    xs: 47.999em,
+    sm: 63.999em,
+    md: 74.999em,
+    lg: none,
+);
+@function maxWidthVisibility($key) {
+    @if map-has-key($maxWidthVisibility, $key) {
+        @return map-get($maxWidthVisibility, $key);
+    }
+
+    @warn "Unknown `#{$key}` in maxWidthVisibility().";
+    @return null;
+}

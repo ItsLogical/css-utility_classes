@@ -1,0 +1,47 @@
+$fontSizes: (
+    0: 3.998em,
+    1: 2.827em,
+    2: 1.999em,
+    3: 1.414em,
+    4: 1.2em,
+    5: 1em,
+    6: 0.707em,
+    7: 0.5em,
+    8: 0.354em,
+);
+
+/* th -> same as HTML headings */
+$th_keys: (0, 1, 2, 3, 4, 5, 6, 7, 8);
+@function th($key) {
+    @if map-has-key($fontSizes, $key) {
+        @return map-get($fontSizes, $key);
+    }
+
+    @warn "Unknown `#{$key}` in th().";
+    @return null;
+}
+
+
+/* tb -> bigger font-size than default */
+$tb_keys: (0, 1, 2, 3, 4, 5);
+@function tb($key) {
+    $tb_key: 5 - $key;
+    @if map-has-key($fontSizes, $tb_key) {
+      @return map-get($fontSizes, $tb_key);
+    }
+  
+    @warn "Unknown `#{$th_key}` in tb().";
+    @return null;
+}
+
+/* ts -> smaller font-size than default */
+$ts_keys: (0, 1, 2, 3);
+@function ts($key) {
+    $ts_key: 5 + $key;
+    @if map-has-key($fontSizes, $ts_key) {
+      @return map-get($fontSizes, $ts_key);
+    }
+  
+    @warn "Unknown `#{$ts_key}` in tb().";
+    @return null;
+}

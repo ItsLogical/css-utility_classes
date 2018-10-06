@@ -132,8 +132,8 @@ Easily try out different sizes, spacings, colors, fonts all by changing a few cl
 </code></pre>
 <p>Do this:</p>
 <pre><code class="lang-css">.comment-wrapper-first-disabled {
-    @extend .not-allowed;
-    @extend .no-select;
+    @include not-allowed();
+    @include no-select();
 }
 </code></pre>
 <h3 id="changelog">Changelog</h3>
@@ -160,6 +160,41 @@ Easily try out different sizes, spacings, colors, fonts all by changing a few cl
 <td>v2.0.1</td>
 <td>binding strength</td>
 <td>added important to the responsiveness visibility classes</td>
+</tr>
+<tr>
+<td>v2.0.2</td>
+<td>link-underline fix</td>
+<td>the underline should be done with text-decoration not borders</td>
+</tr>
+<tr>
+<td>v2.0.3</td>
+<td>specificity fix</td>
+<td>specificity for responsiveness visibility improved</td>
+</tr>
+<tr>
+<td>v2.1.0</td>
+<td>specificity changed</td>
+<td>specificity for responsiveness visibility changed / renewed</td>
+</tr>
+<tr>
+<td>v2.1.1</td>
+<td>added reset optional</td>
+<td>itl-css_reset: overrides/improves default browser behaviour</td>
+</tr>
+<tr>
+<td>v3.0.0</td>
+<td>mixins &gt; inheritance</td>
+<td>change the inherited properties for mixins</td>
+</tr>
+<tr>
+<td></td>
+<td>dont autoload fonts</td>
+<td>Autoloading new typefaces from google API made optional</td>
+</tr>
+<tr>
+<td></td>
+<td>allow overrides</td>
+<td>Allow color and font overrides</td>
 </tr>
 </tbody>
 </table>

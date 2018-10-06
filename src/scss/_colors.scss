@@ -1,14 +1,11 @@
+$faded_alpha: 0.3;
+
 // Background-colors
 //
+// <code class="block">@mixin bgColor($color)</code>
 // To change the background-colors of elements use these classes
 // <ul>
 // <li>.bg-&lt;color&gt;: changes the background color</li>
-// <li>.bg-lighten: ligthens the entire element 
-//  <span class="note">Also lightens the fonts</span></li>
-// <li>.bg-darken: darkens the element
-//  <span class="note">Also darkens the fonts</span></li>
-// <li>.bg-shaded (only for nested elements): darkens the element
-//  <span class="note">Also darkens the fonts</span></li>
 //  <li>&lt;ANY&gt;--faded: lowers the opacity of the color
 // </ul>
 //
@@ -17,31 +14,140 @@
 // <div class="bg-white p16">White div</div>
 // <div class="bg-blue p16">Blue div</div>
 // <div class="bg-blue--faded p16">Blue faded div</div>
+//
+//
+// Styleguide Colors.backgroundColor
+@mixin bgColor($color){
+    background-color: color($color);
+}
+@each $colorName, $colorValue in $colors {
+    .bg-#{$colorName} {
+        background-color: $colorValue !important;
+    }
+    .bg-#{$colorName}--faded {
+        background-color: rgba($colorValue, $faded_alpha) !important;
+    }
+}
+
+@mixin bgGradColor($color) {
+    background: grad($color);
+}
+@each $colorName, $colorValue in $gradients {
+    .bg-grad-#{$colorName} {
+        background: $colorValue;
+    }
+}
+
+// Background-style
+//
+// <code class="block">@mixin bgStyle([shaded, darken, lighten, shadow])</code>
+// To change the background-colors of elements use these classes
+// <ul>
+// <li>.bg-lighten: ligthens the entire element 
+//  <span class="note">Also lightens the fonts</span></li>
+// <li>.bg-darken: darkens the entire element
+//  <span class="note">Also darkens the fonts</span></li>
+// <li>.bg-shaded (only for nested elements): darkens the element
+//  <span class="note">Also darkens the fonts</span></li>
+//  <li>&lt;ANY&gt;--faded: lowers the opacity of the color
+// </ul>
+//
+// Markup:
 // <div class="bg-purple p16">Purple div<div class="bg-shaded p4">Shaded div</div></div>
 // <div class="bg-purple p16">Purple div<div class="bg-darken p4">Darkend div</div></div>
 // <div class="bg-blue bg-darken p16">Darkened Blue div</div>
 // <div class="bg-blue bg-lighten p16">Lightend Blue div</div>
 //
 //
-// Styleguide Colors.background
+// Styleguide Colors.backgroundStyle
+@mixin bgStyle($style){
+    @if $style == 'shaded' {
+        background-color: rgba(0,0,0,0.25);
+    }
+    @if $style == 'darken' {
+        position: relative;
+        &:after {
+            content: '\A';
+            position: absolute;
+            width: 100%;
+            height:100%;
+            top:0;
+            left:0;
+            background:rgba(0,0,0,0.5);
+        }
+
+        &.darken--light:after {
+            background:rgba(0,0,0,0.25);
+        }
+    }
+    @if $style == 'lighten' {
+        position: relative;
+        &:after {
+            content: '\A';
+            position: absolute;
+            width: 100%;
+            height:100%;
+            top:0;
+            left:0;
+            background:rgba(255,255,255,0.5);
+        }
+    }
+    @if $style == 'shadow' {
+        box-shadow: 1px 1px 1px 1px black;
+    }
+}
+.bg-shaded {
+    @include bgStyle('shaded');
+}
+.bg-darken {
+    @include bgStyle('darken');
+}
+.bg-lighten {
+    @include bgStyle('lighten');
+}
+.bg-shadow {
+    @include bgStyle('shadow');
+}
 
 // Font-colors
 //
+// <code class="block">@mixin color($color)</code>
 // Use the color class directly to change the font color
 // <ul>
-//  <li>.&lt;color&gt;</li>
-//  <li>&lt;ANY&gt;--faded: lowers the opacity of the color</li>
+//  <li>.&lt;color&gt;: font color</li>
+//  <li>.&lt;color&gt;--faded: lowers the opacity of the color</li>
+//  <li>.grad-&lt;color&gt;: gradient font color</li>
 // </ul>
 //
 // Markup:
 // <h1 class="red">Red text</h1>
+// <h1 class="red--faded">faded blue text</h1>
 // <h1 class="grad-purple">Purple gradient text</h1>
 //
 //
 // Styleguide Colors.font
+@mixin color($color) {
+    color: color($color);
+}
+@each $colorName, $colorValue in $colors {
+    .#{$colorName} {
+        color: $colorValue !important;
+    }
+    .#{$colorName}--faded {
+        color: rgba($colorValue, $faded_alpha) !important;
+    }
+}
+@each $colorName, $colorValue in $gradients {
+    .grad-#{$colorName} {
+        background: $colorValue;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
 // Border-colors
 //
+// <code class="block">@mixin border($color)</code>
 // To add borders in various colours use the following classes:
 // <ul>
 // <li>.underline-&lt;color&gt;: adds a 1px border at the top side of the element</li>
@@ -57,21 +163,10 @@
 //
 //
 // Styleguide Colors.border
-$faded_alpha: 0.3;
-
+@mixin border($color) {
+    border: 1px solid color($color) !important;
+}
 @each $colorName, $colorValue in $colors {
-    .#{$colorName} {
-        color: $colorValue !important;
-    }
-    .#{$colorName}--faded {
-        color: rgba($colorValue, $faded_alpha) !important;
-    }
-    .bg-#{$colorName} {
-        background-color: $colorValue !important;
-    }
-    .bg-#{$colorName}--faded {
-        background-color: rgba($colorValue, $faded_alpha) !important;
-    }
     .underline-#{$colorName} {
         border-bottom: 1px solid rgba($colorValue, 1) !important;
     }
@@ -89,52 +184,5 @@ $faded_alpha: 0.3;
     }
     .border-#{$colorName}--faded {
         border: 1px solid rgba($colorValue, $faded_alpha) !important;
-    }
-}
-
-/* other bg-tricks */
-.bg-shaded {
-    background-color: rgba(0,0,0,0.25);
-}
-.bg-darken {
-    position: relative;
-    &:after {
-        content: '\A';
-        position: absolute;
-        width: 100%;
-        height:100%;
-        top:0;
-        left:0;
-        background:rgba(0,0,0,0.5);
-    }
-
-    &.darken--light:after {
-        background:rgba(0,0,0,0.25);
-    }
-}
-.bg-lighten {
-    position: relative;
-    &:after {
-        content: '\A';
-        position: absolute;
-        width: 100%;
-        height:100%;
-        top:0;
-        left:0;
-        background:rgba(255,255,255,0.5);
-    }
-}
-.bg-shadow {
-    box-shadow: 1px 1px 1px 1px black;
-}
-
-@each $colorName, $colorValue in $gradients {
-    .grad-#{$colorName} {
-        background: $colorValue;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .bg-grad-#{$colorName} {
-        background: $colorValue;
     }
 }

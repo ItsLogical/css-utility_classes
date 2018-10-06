@@ -1,3 +1,17 @@
+$titleFontFamily: "Montserrat" !default;
+$textFontFamily: "Raleway" !default;
+
+$turqColor: #1abc9c !default;
+$greenColor: #2ecc71 !default;
+$blueColor: #3498db !default;
+$purpleColor: #9b59b6 !default;
+$blackColor: #34495e !default;
+$yellowColor: #f1c40f !default;
+$orangeColor: #e67e22 !default;
+$redColor: #e74c3c !default;
+$whiteColor: #ecf0f1 !default;
+$grayColor: #95a5a6 !default;
+
 // Colors
 //
 // The primary colors. <br/>
@@ -18,16 +32,16 @@
 //
 // Styleguide Colors
 $colors: (
-    turq: #1abc9c,
-    green: #2ecc71,
-    blue: #3498db,
-    purple: #9b59b6,
-    black: #34495e,
-    yellow: #f1c40f,
-    orange: #e67e22,
-    red: #e74c3c,
-    white: #ecf0f1,
-    gray: #95a5a6,
+    turq: $turqColor,
+    green: $greenColor,
+    blue: $blueColor,
+    purple: $purpleColor,
+    black: $blackColor,
+    yellow: $yellowColor,
+    orange: $orangeColor,
+    red: $redColor,
+    white: $whiteColor,
+    gray: $grayColor,
     blank: white,
     eee: #eee
   );
@@ -81,8 +95,8 @@ $colors: (
   );
 
   /**
-   * Used to retrieve color from dictionary
-   *  Example: color(turq) -> returns: #1abc9c
+   * Used to retrieve grad from dictionary
+   *  Example: grad(turq) -> returns: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
    */
    @function grad($key) {
     @if map-has-key($gradients, $key) {

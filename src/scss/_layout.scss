@@ -64,23 +64,35 @@
 
 // Placement
 //
+// <code class="block">@mixin absolute-cover</code>
+// <code class="block">@mixin pseudo-cover -- use on a :before or :after to cover node</code>
 // To change position of fixed and absolute elements use these classes:
 // <ul>
 // <li>.t&lt;X&gt;: Changes the top value to X</li>
 // <li>.r&lt;X&gt;: Changes the right value to X</li>
 // <li>.b&lt;X&gt;: Changes the bottom value to X</li>
 // <li>.l&lt;X&gt;: Changes the left value to X</li>
-// <li>.absolute--fill: makes an absolute element fill its relative parent</li>
+// <li>.absolute-cover: makes element cover its relative parent</li>
 // </ul>
 // <p>X should be in: [0, 4, 8, 16, 32, 64, 128, 256, 512]</p>
 //
 //
 // Styleguide Layout.eposition.placement
-.absolute--fill {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+@mixin pseudo-cover() {
+    content: " ";
+    @include cover();
+}
+
+@mixin absolute-cover() {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+.absolute-cover {
+    @include absolute-cover();
 }
 
 $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
@@ -102,6 +114,8 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 
 // Flex
 //
+// <code class="block">@mixin flex-center</code>
+// <code class="block">@mixin flex-column</code>
 // <ul>
 // <li>.flex: sets display to flex</li>
 // <li>.flex-column: creates a flex column</li>
@@ -130,16 +144,20 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 // </div>
 //
 // Styleguide Layout.Flex
+
+@mixin flex-column() {
+    display: flex !important;
+    flex-direction: column !important;
+}
 .flex {
     display: flex !important;
 }
 .flex-row {
-    @extend .flex;
+    display: flex !important;
     flex-direction: row !important;
 }
-.flex-column, .flex--column {
-    @extend .flex;
-    flex-direction: column !important;
+.flex-column {
+    @include flex-column;
 }
 .flex-shrink {
     flex-shrink: 1 !important;
@@ -153,16 +171,20 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 .flex-end {
     align-self: flex-end;
 }
-.flex-center {
+@mixin flex-center() {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+.flex-center {
+    @include flex-center();
 }
 
 
 // Spacing
 //
-//
+// <code class="block">@mixin space-between</code>
+// <code class="block">@mixin space-around</code>
 // <ul>
 // <li>.space-between: justify-content: space-between</li>
 // <li>.space-around: justify-content: space-around</li>
@@ -177,19 +199,20 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 // </div>
 //
 // Styleguide Layout.Spacing
-.space-between {
-    display: flex;
+@mixin space-between() {
+    display: flex !important;
     justify-content: space-between !important;
 }
-.space-around {
-    display: flex;
+@mixin space-around() {
+    display: flex !important;
     justify-content: space-around !important;
 }
-
-// e.g. items in a row with an un equal height will be on the same baseline
-// handy for in navbars
-
-
+.space-between {
+    @include space-between();
+}
+.space-around {
+    @include space-around();
+}
 
 // Other
 //
@@ -199,6 +222,7 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 
 // Centering
 //
+// <code class="block">@mixin flex-center</code>
 // <ul>
 //  <li>.m-auto: absolute centering (block in block)@child</li>
 //  <li>.m0-auto: horizontal center (block in block)@child</li>
@@ -222,7 +246,6 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 .m-auto {
     margin: auto;
 }
-
 .m0-auto {
     margin: 0 auto;
 }
@@ -266,5 +289,5 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
     text-align: right !important;
 }
 .center-align {
-    @extend .center;
+    text-align: center !important;
 }

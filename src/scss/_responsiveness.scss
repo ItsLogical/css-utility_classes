@@ -3,20 +3,17 @@
 // NOTE: breakpoints set to be consistent with flexboxgrid
 @mixin breakpoint($point) {
     @if $point==lg {
-        @media (min-width: 75em) {
-            // 1200px
+        @media (min-width: minWidthVisibility(lg)) {  
             @content ;
         }
     }
     @else if $point==md {
-        @media (min-width: 64em) {
-            // 1024px
+        @media (min-width: minWidthVisibility(md)) {
             @content ;
         }
     }
     @else if $point==sm {
-        @media (min-width: 48em) {
-            // 768px
+        @media (min-width: minWidthVisibility(sm)) {
             @content ;
         }
     }
@@ -27,6 +24,7 @@
 
 // Responsiveness
 //
+// <code class="block">@mixin container($size:optional)</code>
 // Wrap content into containers to make it responsive
 // Default containers max-width: 1200px
 //
@@ -45,33 +43,62 @@
 //
 //
 // Styleguide Responsiveness
-.container {
-    @include breakpoint(xs) {
+@mixin container($size: null) {
+    max-width: 100%;
+    
+    @include breakpoint(xs) { // < 768px
         width: 100%;
     }
-    @include breakpoint(sm) {
-        width: 800px;
+    @include breakpoint(sm) { // 1024px >= 768px 
+        width: 750px;
     }
-    @include breakpoint(md) {
+    @include breakpoint(md) { // 1200px >= 1024px
         width: 1000px;
     }
-    @include breakpoint(lg) {
+    @include breakpoint(lg) { // >= 1200px
         width: 1200px;
     }
+
+    @if $size {
+        @include containerSize($size);
+    }
+}
+.container {
+    @include container();
 }
 
+@mixin containerSize($size){
+    @if $size == 'small' {
+        @include breakpoint(md) { // 1200px >= 1024px
+            width: 750px;
+        }
+        @include breakpoint(lg) { // >= 1200px
+            width: 750px;
+        }
+    }
+    @if $size == 'medium' {
+        @include breakpoint(lg) { // >= 1200px
+            width: 1000px;
+        }
+    }
+}
 .container--small {
-    max-width: 800px;
+    @include containerSize('small');
 }
 .container--medium {
-    max-width: 1000px;
+    @include containerSize('medium');
 }
-.container--large { // default container
-    max-width: inherit;
+.container--large { 
+    // @include containerSize('large');
 }
 
 // Visibility
 //
+// <code class="block">@mixin show($size) -- and below</code>
+// <code class="block">@mixin hide($size) -- and below</code>
+// <code class="block">@mixin hideOnly($size)</code>
+// <code class="block">@mixin showOnly($size)</code>
+// <p>&lt;show/hide&gt;-&lt;x&gt;(-and_below)</p>
 // <span class="note">Made with flexboxgrid compatibility</span>
 // <table class="table table--bordered">
 //  <tr><th></th>               <th>&lt; 768px</th>         <th>&lt; 1024px</th>        <th>&lt; 1200px</th>        <th>&gt; 1200px</th></tr>
@@ -102,87 +129,47 @@
 //
 //
 // Styleguide Responsiveness.visibilty
-.hide-xs,
-.hide-xs-only {
-    @media (max-width: 47.999em) {
+@mixin hideOnly($screenSize) {
+    @media (min-width: minWidthVisibility($screenSize)) and (max-width: maxWidthVisibility($screenSize)){
+        display: none !important;
+    }
+}
+@mixin showOnly($screenSize) {
+    @media (max-width: minWidthVisibility($screenSize) - 0.001 ){ // hide everything below current screensize
+        display: none !important;
+    }
+    @media (min-width: maxWidthVisibility($screenSize) + 0.001 ) { // hide from next screensize onwards
+        display: none !important;
+    }
+}
+@mixin hide($screenSize) {
+    @media (max-width: maxWidthVisibility($screenSize)) {
+        display: none !important;
+    }
+}
+@mixin show($screenSize) {
+    @media (min-width: maxWidthVisibility($screenSize) + 0.001 ){ // hide from next screensize onwards
         display: none !important;
     }
 }
 
-.hide-sm {
-    @media (max-width: 63.999em) {
-        display: none !important;
+@each $screenSize in ('sm', 'md', 'lg') { // cannot hide-xs and below (hide all)
+    .hide-#{$screenSize} {
+        @include hide($screenSize);
     }
 }
-
-.hide-md {
-    @media (max-width: 74.999em) {
-        display: none !important;
+@each $screenSize in ('xs', 'sm', 'md', 'lg') {
+    .hide-#{$screenSize}-only {
+        @include hideOnly($screenSize);
     }
 }
-
-.hide-sm-only {
-    @media (min-width: 48em) and (max-width: 63.999em) {
-        display: none !important;
+@each $screenSize in ('xs', 'sm', 'md') { // cannot show-lg and below (show all)
+    .show-#{$screenSize} {
+        @include show($screenSize);
     }
 }
-
-.hide-md-only {
-    @media (min-width: 64em) and (max-width: 74.999em) {
-        display: none !important;
-    }
-}
-
-.hide-lg-only {
-    @media (min-width: 75em) {
-        display: none !important;
-    }
-}
-
-.show-xs {
-    @media (min-width: 48em) {
-        display: none !important;
-    }
-}
-
-.show-sm {
-    @media (min-width: 64em) {
-        display: none !important;
-    }
-}
-
-.show-md {
-    @media (min-width: 75em) {
-        display: none !important;
-    }
-}
-
-.show-xs-only {
-    @media (min-width: 48em) {
-        display: none !important;
-    }
-}
-
-.show-sm-only {
-    @media (max-width: 47.999em) {
-        display: none !important;
-    }
-    @media (min-width: 64em) {
-        display: none !important;
-    }
-}
-
-.show-md-only {
-    @media (max-width: 63.999em) {
-        display: none !important;
-    }
-    @media (min-width: 75em) {
-        display: none !important;
-    }
-}
-
-.show-lg-only {
-    @media (max-width: 74.999em) {
-        display: none !important;
+@each $screenSize in ('xs', 'sm', 'md', 'lg') {
+    .show-#{$screenSize}-only {
+        @include showOnly($screenSize);
     }
 }

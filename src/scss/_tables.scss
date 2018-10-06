@@ -1,5 +1,7 @@
 // Table
 //
+// <code class="block">@mixin table</code>
+// <code class="block">@mixin tableStyle([striped, bordered])</code>
 // Some simple table styles
 // <ul>
 // <li>.table: simple table styling</li>
@@ -36,18 +38,12 @@
 //
 //
 // Styleguide Table
-.table {
+@mixin table() {
     border-spacing: 0px;
     border-collapse: collapse;
 
     td, th {
         padding: 16px;
-    }
-}
-
-.table--striped {
-    tr:nth-child(odd) {
-        @extend .bg-eee;
     }
 
     // different row-colors
@@ -60,13 +56,6 @@
             background-color: $colorValue !important;
         }
     }
-}
-
-
-.table--bordered {
-    th, td {
-        border: 1px solid black;
-    }
 
     // different border-colors
     @each $colorName, $colorValue in $colors {
@@ -78,11 +67,35 @@
     }
 
     // different border-style
-    &.bordered--vertical {
+    &.bordered--horizontal {
         th, td {
             border-left-width: 0px;
             border-right-width: 0px;
         }
     }
+}
+.table {
+    @include table();
+}
+
+@mixin tableStyle($style){
+    @if $style == 'striped' {
+        tr:nth-child(odd) {
+            background-color: color(eee);
+        }
+    
+    }
+    @if $style == 'bordered' {
+        th, td {
+            border: 1px solid black;
+        }
+    }
+}
+
+.table--striped {
+    @include tableStyle('striped');
+}
+.table--bordered {
+    @include tableStyle('bordered');
 }
 

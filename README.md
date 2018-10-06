@@ -44,8 +44,8 @@ Instead of doing this:
 Do this:
 ```css
 .comment-wrapper-first-disabled {
-    @extend .not-allowed;
-    @extend .no-select;
+    @include not-allowed();
+    @include no-select();
 }
 ```
 
@@ -60,5 +60,8 @@ Do this:
 | v2.0.3  | specificity fix      | specificity for responsiveness visibility improved               |
 | v2.1.0  | specificity changed  | specificity for responsiveness visibility changed / renewed      |
 | v2.1.1  | added reset optional | itl-css_reset: overrides/improves default browser behaviour      |
+| v3.0.0  | mixins > inheritance | change the inherited properties for mixins                       |
+|         | dont autoload fonts  | Autoloading new typefaces from google API made optional          |
+|         | allow overrides      | Allow color and font overrides                                   |
 
 DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.

@@ -5,6 +5,8 @@
 
 // Clickable links
 //
+// <code class="block">@mixin clickable</code>
+// <code class="block">@mixin link</code>
 // <ul>
 // <li>.clickable: changes the cursor</li>
 // <li>.link: turns text into a link</li>
@@ -16,22 +18,26 @@
 //
 //
 // Styleguide zMisc.clickable
-.clickable {
+@mixin clickable() {
     cursor: pointer;
 }
-.link {
+@mixin link() {
     display: inline-block;
     cursor: pointer;
     color: color(blue);
+    text-decoration: underline solid color(blue);
+}
 
-    text-decoration: underline solid transparent;
-    &:hover {
-        text-decoration: underline solid color(blue);
-    }
+.clickable {
+    @include clickable();
+}
+.link {
+    @include link();
 }
 
 // Not-allowed
 //
+// <code class="block">@mixin not-allowed</code>
 // Use this class to make interaction with elements not-allowed
 //
 // Markup:
@@ -40,12 +46,16 @@
 //
 //
 // Styleguide zMisc.noclick
-.not-allowed {
+@mixin not-allowed() {
     cursor: not-allowed;
+}
+.not-allowed {
+    @include not-allowed();
 }
 
 // Not selectable
 //
+// <code class="block">@mixin no-select</code>
 // Use this class to make elements non selectable (press CTRL+A and you'll notice)
 // <ul>
 // <li>.no-select: makes element not selectable</li>
@@ -56,13 +66,18 @@
 //
 //
 // Styleguide zMisc.noselect
-.no-select {
+@mixin no-select() {
     user-select: none;
     outline: none;
+}
+.no-select {
+    @include no-select();
 }
 
 // Appearance
 //
+// <code class="block">@mixin fade</code>
+// <code class="block">@mixin faded</code>
 // <ul>
 // <li>.fade: lowers opacity of an ele</li>
 // <li>.faded: lowers the opacity even more</li>
@@ -77,18 +92,24 @@
 // <div class="hover-faded">Hover-faded</div>
 //
 // Styleguide zMisc.appearance
-.fade {
+@mixin fade() {
     opacity: 0.7;
 }
-.faded {
+@mixin faded() {
     opacity: 0.3;
 }
 
+.fade {
+    @include fade();
+}
+.faded {
+    @include faded();
+}
 .hover-fade:hover {
-    @extend .fade;
+    @include fade();
 }
 .hover-faded:hover {
-    @extend .faded;
+    @include faded();
 }
 .hover-normal {
     opacity: 1;
@@ -96,9 +117,13 @@
 
 // Other
 //
+// <code class="block">@mixin unset</code>
 // .unset: unsets all style
 //
 // Styleguide zMisc.zother
-.unset {
+@mixin unset() {
     all: unset !important;
+}
+.unset {
+    @include unset();
 }

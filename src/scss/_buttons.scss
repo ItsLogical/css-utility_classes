@@ -5,15 +5,17 @@
 
 // Buttons
 //
+// <code class="block">@mixin button</code>
 // Improvement uppon the default buttons. Buttons as they should be. 
 //
 // Markup:
-// <button>Normal button</button><button class="button border-black">Utility button</button>
+// <button>Normal button</button><button class="button">Utility button</button>
 // 
 // Styleguide Button
 
 // Sizes
 //
+// <code class="block">@mixin buttonSize([xs,sm,md,lg,xl,wide,wider])</code>
 // use the BEM modifiers to change the default button sizes:
 // <ul>
 // <li>.button--xs: smallest button in the book</li>
@@ -34,45 +36,71 @@
 //
 //
 // Styleguide Button.sizes
-.button {
-    @extend .no-select;
-    @extend .clickable;
+@mixin button() {
+    @include no-select();
+    @include clickable();
+    @include border(black);
     display: inline-block;
-    padding: 12px 16px;
     border: none;
 
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
+
+    padding: 12px 16px;
+}
+.button {
+    @include button();
 }
 
-// NOTE: The button sizes can still be tweaked and optimized.
+// TODO: Optimize button sizes
+@mixin buttonSize($size){ 
+    @if $size == 'xs' {
+        padding: 4px !important;
+    }
+    @if $size == 'sm' {
+        padding: 8px 10px !important;
+    }
+    @if $size == 'lg' {
+        padding: 16px 32px !important;
+    }
+    @if $size == 'xl' {
+        padding: 24px 64px !important;
+    }
+    @if $size == 'wide' {
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+    }
+    @if $size == 'wider' {
+        padding-left: 64px !important; 
+        padding-right: 64px !important;
+    }
+}
 .button--xs {
-    padding: 4px !important;
+    @include buttonSize('xs');
 }
 .button--sm {
-    padding: 8px 10px !important;
+    @include buttonSize('sm');
 }
 .button--md {
-
+    @include buttonSize('md');
 }
 .button--lg {
-    padding: 16px 32px !important;
+    @include buttonSize('lg');
 }
 .button--xl {
-    padding: 24px 64px !important;
+    @include buttonSize('xl');
 }
 .button--wide {
-    padding-left: 32px !important;
-    padding-right: 32px !important;
+    @include buttonSize('wide');
 }
 .button--wider {
-    padding-left: 64px;
-    padding-right: 64px;
+    @include buttonSize('wider');
 }
 
 // Styles
 //
+// <code class="block">@mixin buttonStyle([flat, curve, pill, round])</code>
 // Add appearance styles to buttons
 // <ul>
 // <li>.button--flat: removes the border-radius</li>
@@ -90,58 +118,83 @@
 //
 //
 // Styleguide Button.styles
+@mixin buttonStyle($style){ // should only be used in combination with button()
+    @if $style == 'flat' {
+        border-radius: 0px !important;
+    }
+    @if $style == 'curve' {
+        border-radius: 8px !important;
+    }
+    @if $style == 'pill' {
+        border-radius: 20px !important;
+    }
+    @if $style == 'round' {
+        @include flex-center();
+        border-radius: 50%;
+    } 
+}
 .button--flat {
-    border-radius: 0px !important;
+    @include buttonStyle('flat');
 }
 .button--curve {
-    border-radius: 8px !important;
+    @include buttonStyle('curve');
 }
 .button--pill {
-    border-radius: 20px !important;
+    @include buttonStyle('pill');
 }
 .button--round {
-    @extend .flex-center;
-    border-radius: 50%;
+    @include buttonStyle('round');
 }
 
 // Effects
 //
+// <code class="block">@mixin buttonEffect([lighten, darken, 3d])</code>
 // Add hover-effects to buttons
 // <ul>
-// <li>.button--fade: fades the button opacity <span class="note">(.button--lighten)</span></li>
-// <li>.button--darken: darkens the button bg <span class="note">(can also be used with darken--light)</span></li>
-// <li>.button--press: gives a 3d effect to a button <span class="note">(.button--3d)</span></li>
+// <li>.button--lighten: lightens the button opacity</li>
+// <li>.button--darken: darkens the button bg</li>
+// <li>.button--3d: gives a 3d effect to a button</li>
 // </ul>
 //
 // Markup:
-// <button class="button--fade button bg-green">Sample button</button>
+// <button class="button--lighten button bg-green">Sample button</button>
 // <button class="button--darken button bg-green">Sample button</button>
-// <button class="button--darken darken--light button bg-green">Sample button</button>
-// <button class="button--press button bg-green">Sample button</button>
+// <button class="button--3d button bg-green">Sample button</button>
 //
 //
 // Styleguide Button.Effects
-.button--fade, .button--lighten {
-    transition: 0.2s;
-    &:hover {
-        opacity: 0.8;
+@mixin buttonEffect($effect) {
+    @if $effect == 'lighten' {
+        transition: 0.2s;
+        &:hover {
+            opacity: 0.8;
+        }
     }
+    @if $effect == 'darken' {
+        transition: 0.2s;
+        &:hover {
+            @include bgStyle('darken');
+        }
+    }
+    @if $effect == '3d' {
+        --button-shadow-color: color(black);
+        box-shadow: 0 3px var(--button-shadow-color);
+        &:hover {
+            box-shadow: 0 2px var(--button-shadow-color);
+            transform: translateY(1px);
+        }
+        &:active {
+            box-shadow: 0 0px var(--button-shadow-color);
+            transform: translateY(3px);
+        }
+    }
+}
+.button--fade, .button--lighten {
+    @include buttonEffect('lighten');
 }
 .button--darken {
-    transition: 0.2s;
-    &:hover {
-        @extend .bg-darken;
-    }
+    @include buttonEffect('darken');
 }
 .button--press, .button--3d {
-    --button-shadow-color: color(black);
-    box-shadow: 0 3px var(--button-shadow-color);
-    &:hover {
-        box-shadow: 0 2px var(--button-shadow-color);
-        transform: translateY(1px);
-    }
-    &:active {
-        box-shadow: 0 0px var(--button-shadow-color);
-        transform: translateY(3px);
-    }
+    @include buttonEffect('3d');
 }
