@@ -1,6 +1,6 @@
 {
   "name": "itl-css-utility_classes",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "ITL css-utility_classes",
   "main": "gulpfile.js",
   "scripts": {
