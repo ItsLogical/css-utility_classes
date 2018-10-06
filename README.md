@@ -2,7 +2,7 @@
 
 # [ITL] CSS utility_classes
 This css file contains lots of handy classes that will improve the efficiency of prototyping webdevelopment.
-Easily try out different sizes, spacings, colors, fonts all by changing a few classes and without messing around in the stylesheets to much.
+Easily try out different sizes, spacings, colors, fonts all by changing a few classes and without messing around in the stylesheets too much.
 
 This code was written under the context of trying new styles quick and easy on any website. e.g. whenever a client wants to see this and that, you dont need to destroy your stylesheets entirely, but just edit the utility_classes of the elements.
 
@@ -28,7 +28,9 @@ Do this:
 
 ### utility_classes with sass
 Extend the classes of utility_classes in your own classes to minimize the code you actually need to write.
-
+```css
+@import "~/itl-css-utility_classes/src/scss/itl-utility_classes";
+```
 Instead of doing this:
 ```css
 .comment-wrapper-first-disabled {
@@ -42,12 +44,24 @@ Instead of doing this:
 ```
 
 Do this:
-```css
+```scss
 .comment-wrapper-first-disabled {
     @include not-allowed();
     @include no-select();
 }
 ```
+
+#### Overriding colors and fonts
+Variables are used for the colors and fonts.
+To override these simply have them set before importing utility_classes.
+```scss
+$redColor: crimson;
+$titleFontFamily: "Lato";
+$textFontFamily: "Open Sans";
+
+@import "...itl-utility_classes";
+```
+
 
 
 ### Changelog
