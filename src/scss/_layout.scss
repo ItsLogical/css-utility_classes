@@ -80,7 +80,7 @@
 // Styleguide Layout.eposition.placement
 @mixin pseudo-cover() {
     content: " ";
-    @include cover();
+    @include absolute-cover();
 }
 
 @mixin absolute-cover() {
@@ -146,15 +146,15 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 // Styleguide Layout.Flex
 
 @mixin flex-column() {
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
 }
 .flex {
     display: flex !important;
 }
 .flex-row {
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex;
+    flex-direction: row;
 }
 .flex-column {
     @include flex-column;
@@ -200,12 +200,12 @@ $supported_sizes: (0, 4, 8, 16, 32, 64, 128, 256, 512);
 //
 // Styleguide Layout.Spacing
 @mixin space-between() {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: flex;
+    justify-content: space-between;
 }
 @mixin space-around() {
-    display: flex !important;
-    justify-content: space-around !important;
+    display: flex;
+    justify-content: space-around;
 }
 .space-between {
     @include space-between();

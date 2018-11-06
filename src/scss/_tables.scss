@@ -49,11 +49,11 @@
     // different row-colors
     @each $colorName, $colorValue in $colors {
         &.striped__odd--#{$colorName} tr:nth-child(odd){
-            background-color: $colorValue !important;
+            background-color: $colorValue;
         }
 
         &.striped__even--#{$colorName} tr:nth-child(even){
-            background-color: $colorValue !important;
+            background-color: $colorValue;
         }
     }
 

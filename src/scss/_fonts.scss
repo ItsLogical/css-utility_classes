@@ -60,7 +60,7 @@
     textSmaller
 ============================================================================ */
 @mixin th($key){
-  font-size: th($key) !important;
+  font-size: th($key);
 }
 @each $th_key in $th_keys {
   .th#{$th_key} {
@@ -69,7 +69,7 @@
 }
 
 @mixin tb($key){
-  font-size: tb($key) !important;
+  font-size: tb($key);
 }
 @each $tb_key in $tb_keys {
   .tb#{$tb_key} {
@@ -78,7 +78,7 @@
 }
 
 @mixin ts($key){
-  font-size: ts($key) !important;
+  font-size: ts($key);
 }
 @each $ts_key in $ts_keys {
   .ts#{$ts_key} {

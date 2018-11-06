@@ -12,6 +12,8 @@
   (important things first)
  - It is not intended as a CSS-Framework therefore real styles should be made on
  top of the utility classes stylesheet.
+ - NO use of !important within mixins
+The only allowed use-case for important is for classes that do exactly 1 thing.
 
 
  ### HOW-TO-DEVELOP

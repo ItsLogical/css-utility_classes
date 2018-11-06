@@ -164,7 +164,7 @@ $faded_alpha: 0.3;
 //
 // Styleguide Colors.border
 @mixin border($color) {
-    border: 1px solid color($color) !important;
+    border: 1px solid color($color);
 }
 @each $colorName, $colorValue in $colors {
     .underline-#{$colorName} {

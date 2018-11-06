@@ -39,7 +39,10 @@
 @mixin button() {
     @include no-select();
     @include clickable();
-    @include border(black);
+    border: 1px solid color(black);
+    color: color(black);
+    background-color: color(white);
+
     display: inline-block;
     border: none;
 
@@ -56,24 +59,24 @@
 // TODO: Optimize button sizes
 @mixin buttonSize($size){ 
     @if $size == 'xs' {
-        padding: 4px !important;
+        padding: 4px;
     }
     @if $size == 'sm' {
-        padding: 8px 10px !important;
+        padding: 8px 10px;
     }
     @if $size == 'lg' {
-        padding: 16px 32px !important;
+        padding: 16px 32px;
     }
     @if $size == 'xl' {
-        padding: 24px 64px !important;
+        padding: 24px 64px;
     }
     @if $size == 'wide' {
-        padding-left: 32px !important;
-        padding-right: 32px !important;
+        padding-left: 32px;
+        padding-right: 32px;
     }
     @if $size == 'wider' {
-        padding-left: 64px !important; 
-        padding-right: 64px !important;
+        padding-left: 64px; 
+        padding-right: 64px;
     }
 }
 .button--xs {
@@ -120,13 +123,13 @@
 // Styleguide Button.styles
 @mixin buttonStyle($style){ // should only be used in combination with button()
     @if $style == 'flat' {
-        border-radius: 0px !important;
+        border-radius: 0px;
     }
     @if $style == 'curve' {
-        border-radius: 8px !important;
+        border-radius: 8px;
     }
     @if $style == 'pill' {
-        border-radius: 20px !important;
+        border-radius: 20px;
     }
     @if $style == 'round' {
         @include flex-center();

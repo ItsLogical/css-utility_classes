@@ -46,8 +46,8 @@ Instead of doing this:
 Do this:
 ```scss
 .comment-wrapper-first-disabled {
-    @include not-allowed();
-    @include no-select();
+    @include not-allowed;
+    @include no-select;
 }
 ```
 
@@ -77,5 +77,8 @@ $textFontFamily: "Open Sans";
 | v3.0.0  | mixins > inheritance | change the inherited properties for mixins                       |
 |         | dont autoload fonts  | Autoloading new typefaces from google API made optional          |
 |         | allow overrides      | Allow color and font overrides                                   |
+| v3.0.1  | README update        | How to use                                                       |
+| v3.0.2  | Specificity (button) | Specifity fix. No need for important everywhere.                 |
+| v3.0.3  | underline link       | Removed the blue color on link underlines.                       |
 
 DISCLAIMER utility_classes was written for prototype development; Therefore try to use it only as such.
